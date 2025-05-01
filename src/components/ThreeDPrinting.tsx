@@ -1,10 +1,15 @@
 
 import { Box, Package } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { scrollToSection } from '@/utils/scrollUtils';
 
 const ThreeDPrinting = () => {
+  const handleButtonClick = () => {
+    scrollToSection('get-in-touch');
+  };
+
   return (
-    <section className="py-16 md:py-24 bg-service-gradient">
+    <section id="printing-3d" className="py-16 md:py-24 bg-service-gradient">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <div className="flex justify-center mb-4">
@@ -114,7 +119,10 @@ const ThreeDPrinting = () => {
               <p className="text-gray-600 mb-6">
                 Our experts help you choose the right materials for your application based on requirements for strength, temperature resistance, flexibility, and environmental conditions.
               </p>
-              <Button className="w-full md:w-auto bg-gradient-to-r from-zseetech-teal-light to-zseetech-teal text-white">
+              <Button 
+                className="w-full md:w-auto bg-gradient-to-r from-zseetech-teal-light to-zseetech-teal text-white"
+                onClick={handleButtonClick}
+              >
                 Schedule a Consultation
               </Button>
             </div>

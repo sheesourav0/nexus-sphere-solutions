@@ -1,6 +1,7 @@
 
 import { Button } from '@/components/ui/button';
 import { BarChart4, Database, Globe, Layers, Shield, SmartphoneIcon } from 'lucide-react';
+import { scrollToSection } from '@/utils/scrollUtils';
 
 const SolutionItem = ({ icon, title, description }: { icon: React.ReactNode, title: string, description: string }) => {
   return (
@@ -19,6 +20,10 @@ const SolutionItem = ({ icon, title, description }: { icon: React.ReactNode, tit
 };
 
 const Solutions = () => {
+  const handleButtonClick = (sectionId: string) => {
+    scrollToSection(sectionId);
+  };
+
   return (
     <section id="solutions" className="bg-gray-50 py-16 md:py-24">
       <div className="container mx-auto px-4">
@@ -30,7 +35,7 @@ const Solutions = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-20">
+        <div id="white-label" className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-20">
           <div>
             <h3 className="section-subtitle mb-6">White-Label IoT Platform</h3>
             <p className="text-zseetech-gray-light mb-8">
@@ -60,7 +65,10 @@ const Solutions = () => {
             </div>
             
             <div className="mt-8">
-              <Button className="bg-gradient-to-r from-zseetech-teal to-zseetech-teal-light text-white">
+              <Button 
+                className="bg-gradient-to-r from-zseetech-teal to-zseetech-teal-light text-white"
+                onClick={() => handleButtonClick('get-in-touch')}
+              >
                 Learn More
               </Button>
             </div>
@@ -82,7 +90,7 @@ const Solutions = () => {
           </div>
         </div>
         
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div id="dashboards" className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div className="order-2 lg:order-1 relative">
             {/* Dashboard visualization */}
             <div className="rounded-xl overflow-hidden shadow-2xl">
@@ -126,12 +134,19 @@ const Solutions = () => {
             </div>
             
             <div className="mt-8">
-              <Button className="bg-gradient-to-r from-zseetech-teal to-zseetech-teal-light text-white">
+              <Button 
+                className="bg-gradient-to-r from-zseetech-teal to-zseetech-teal-light text-white"
+                onClick={() => handleButtonClick('get-in-touch')}
+              >
                 View Demo
               </Button>
             </div>
           </div>
         </div>
+
+        {/* Hidden anchors for navigation purposes */}
+        <div id="custom-apps" className="hidden"></div>
+        <div id="reports" className="hidden"></div>
       </div>
     </section>
   );

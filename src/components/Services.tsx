@@ -5,11 +5,12 @@ type ServiceCardProps = {
   icon: React.ReactNode;
   title: string;
   description: string;
+  id?: string;
 };
 
-const ServiceCard = ({ icon, title, description }: ServiceCardProps) => {
+const ServiceCard = ({ icon, title, description, id }: ServiceCardProps) => {
   return (
-    <div className="service-card">
+    <div className="service-card" data-section={id}>
       <div className="feature-icon">{icon}</div>
       <h3 className="text-xl font-semibold mb-3 text-technexus-blue-dark">{title}</h3>
       <p className="text-gray-600">{description}</p>
@@ -28,13 +29,14 @@ const Services = () => {
         </p>
       </div>
 
-      <div className="mb-16">
+      <div className="mb-16" id="iot-connectivity">
         <h3 className="section-subtitle text-center mb-8">Advanced IoT Connectivity Solutions</h3>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           <ServiceCard
             icon={<Server size={24} className="text-white" />}
             title="Multi-Protocol Gateway Systems"
             description="Enterprise-grade IoT gateways supporting GSM, LoRa, Zigbee, BLE, NB-IoT, and LTE-M protocols for seamless connectivity across diverse environments."
+            id="iot-connectivity"
           />
           <ServiceCard
             icon={<Monitor size={24} className="text-white" />}
@@ -49,13 +51,14 @@ const Services = () => {
         </div>
       </div>
 
-      <div className="mb-16">
+      <div className="mb-16" id="remote-monitoring">
         <h3 className="section-subtitle text-center mb-8">Remote Monitoring & Control Systems</h3>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           <ServiceCard
             icon={<Settings size={24} className="text-white" />}
             title="Industrial Automation"
             description="Real-time monitoring and control of manufacturing equipment, production lines, and facility infrastructure for optimal performance."
+            id="remote-monitoring"
           />
           <ServiceCard
             icon={<Smartphone size={24} className="text-white" />}
@@ -70,13 +73,14 @@ const Services = () => {
         </div>
       </div>
 
-      <div>
+      <div className="mb-16" id="custom-iot">
         <h3 className="section-subtitle text-center mb-8">Custom IoT Development</h3>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           <ServiceCard
             icon={<Settings size={24} className="text-white" />}
             title="Application-Specific Controller Design"
             description="Tailor-made RTU (Remote Terminal Unit) and PLC integration for specialized industrial applications with custom requirements."
+            id="custom-iot"
           />
           <ServiceCard
             icon={<Database size={24} className="text-white" />}

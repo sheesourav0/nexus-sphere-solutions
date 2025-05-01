@@ -3,6 +3,7 @@ import React, { useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Facebook, Linkedin, Mail, Twitter, Phone } from 'lucide-react';
+import { scrollToSection } from '@/utils/scrollUtils';
 
 const Footer = () => {
   useEffect(() => {
@@ -39,6 +40,11 @@ const Footer = () => {
       container.appendChild(particle);
     }
   }, []);
+
+  const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, sectionId: string) => {
+    e.preventDefault();
+    scrollToSection(sectionId);
+  };
   
   return (
     <footer id="footer" className="bg-gray-900 text-white pt-16 pb-8 relative wave-bg overflow-hidden">
@@ -48,7 +54,7 @@ const Footer = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           <div>
-            <a href="#" className="flex items-center mb-6">
+            <a href="#home" onClick={(e) => handleLinkClick(e, 'home')} className="flex items-center mb-6">
               <img src="/zsee-logo-footer.svg" alt="ZSEE Tech" className="h-16 w-auto" />
             </a>
             <p className="text-gray-400 mb-6">
@@ -73,24 +79,24 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-6">Services</h3>
             <ul className="space-y-3">
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">IoT Connectivity</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Remote Monitoring</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Custom IoT Development</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Data Management</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Platform Solutions</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">3D Printing</a></li>
+              <li><a href="#iot-connectivity" onClick={(e) => handleLinkClick(e, 'iot-connectivity')} className="text-gray-400 hover:text-white transition-colors">IoT Connectivity</a></li>
+              <li><a href="#remote-monitoring" onClick={(e) => handleLinkClick(e, 'remote-monitoring')} className="text-gray-400 hover:text-white transition-colors">Remote Monitoring</a></li>
+              <li><a href="#custom-iot" onClick={(e) => handleLinkClick(e, 'custom-iot')} className="text-gray-400 hover:text-white transition-colors">Custom IoT Development</a></li>
+              <li><a href="#" onClick={(e) => handleLinkClick(e, 'services')} className="text-gray-400 hover:text-white transition-colors">Data Management</a></li>
+              <li><a href="#solutions" onClick={(e) => handleLinkClick(e, 'solutions')} className="text-gray-400 hover:text-white transition-colors">Platform Solutions</a></li>
+              <li><a href="#printing-3d" onClick={(e) => handleLinkClick(e, 'printing-3d')} className="text-gray-400 hover:text-white transition-colors">3D Printing</a></li>
             </ul>
           </div>
           
           <div>
             <h3 className="text-lg font-semibold mb-6">Company</h3>
             <ul className="space-y-3">
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">About Us</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Our Team</a></li>
+              <li><a href="#about" onClick={(e) => handleLinkClick(e, 'about')} className="text-gray-400 hover:text-white transition-colors">About Us</a></li>
+              <li><a href="#about" onClick={(e) => handleLinkClick(e, 'about')} className="text-gray-400 hover:text-white transition-colors">Our Team</a></li>
               <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Careers</a></li>
               <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Blog</a></li>
               <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Case Studies</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Contact</a></li>
+              <li><a href="#contact" onClick={(e) => handleLinkClick(e, 'contact')} className="text-gray-400 hover:text-white transition-colors">Contact</a></li>
             </ul>
           </div>
           

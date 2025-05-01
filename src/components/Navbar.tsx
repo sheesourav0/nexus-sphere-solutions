@@ -1,5 +1,5 @@
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { ChevronDown, Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { scrollToSection } from '@/utils/scrollUtils';
@@ -17,10 +17,27 @@ type DropdownMenuData = {
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
+  
+  // Handle scroll event to apply styles based on scroll position
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 10) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+    
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
   
   // Dropdown menu data
   const dropdownMenus: DropdownMenuData = {
@@ -66,7 +83,7 @@ const Navbar = () => {
   };
 
   return (
-    <header className="fixed w-full bg-white/80 backdrop-blur-md z-50 shadow-sm">
+    <header className={`fixed w-full bg-white/80 backdrop-blur-md z-50 shadow-sm transition-all duration-300 ${isScrolled ? 'shadow-md' : ''}`}>
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex items-center justify-between h-16 md:h-20">
           <div className="flex-shrink-0">
@@ -81,7 +98,7 @@ const Navbar = () => {
             
             {/* Services Dropdown */}
             <div 
-              className="relative" 
+              className="relative group" 
               onMouseEnter={() => handleMouseEnter('services')}
               onMouseLeave={handleMouseLeave}
             >
@@ -92,25 +109,25 @@ const Navbar = () => {
               >
                 Services <ChevronDown size={16} className={`ml-1 transition-transform ${activeDropdown === 'services' ? 'rotate-180' : ''}`} />
               </a>
-              {activeDropdown === 'services' && (
-                <div className="absolute top-full left-0 mt-1 w-64 bg-white rounded-md shadow-lg border border-gray-100 py-2 z-50">
-                  {dropdownMenus.services.map((item) => (
-                    <a 
-                      key={item.href} 
-                      href={`#${item.href}`}
-                      onClick={(e) => handleDropdownClick(e, item.href)} 
-                      className="block px-4 py-2 text-sm text-zseetech-blue hover:bg-zseetech-teal/10 hover:text-zseetech-teal"
-                    >
-                      {item.label}
-                    </a>
-                  ))}
-                </div>
-              )}
+              <div 
+                className={`absolute top-full left-0 mt-1 w-64 bg-white rounded-md shadow-lg border border-gray-100 py-2 z-50 transition-all duration-200 origin-top ${activeDropdown === 'services' ? 'opacity-100 scale-100' : 'opacity-0 scale-95 pointer-events-none'}`}
+              >
+                {dropdownMenus.services.map((item) => (
+                  <a 
+                    key={item.href} 
+                    href={`#${item.href}`}
+                    onClick={(e) => handleDropdownClick(e, item.href)} 
+                    className="block px-4 py-2 text-sm text-zseetech-blue hover:bg-zseetech-teal/10 hover:text-zseetech-teal"
+                  >
+                    {item.label}
+                  </a>
+                ))}
+              </div>
             </div>
             
             {/* Solutions Dropdown */}
             <div 
-              className="relative" 
+              className="relative group" 
               onMouseEnter={() => handleMouseEnter('solutions')}
               onMouseLeave={handleMouseLeave}
             >
@@ -121,25 +138,25 @@ const Navbar = () => {
               >
                 Solutions <ChevronDown size={16} className={`ml-1 transition-transform ${activeDropdown === 'solutions' ? 'rotate-180' : ''}`} />
               </a>
-              {activeDropdown === 'solutions' && (
-                <div className="absolute top-full left-0 mt-1 w-64 bg-white rounded-md shadow-lg border border-gray-100 py-2 z-50">
-                  {dropdownMenus.solutions.map((item) => (
-                    <a 
-                      key={item.href} 
-                      href={`#${item.href}`}
-                      onClick={(e) => handleDropdownClick(e, item.href)} 
-                      className="block px-4 py-2 text-sm text-zseetech-blue hover:bg-zseetech-teal/10 hover:text-zseetech-teal"
-                    >
-                      {item.label}
-                    </a>
-                  ))}
-                </div>
-              )}
+              <div 
+                className={`absolute top-full left-0 mt-1 w-64 bg-white rounded-md shadow-lg border border-gray-100 py-2 z-50 transition-all duration-200 origin-top ${activeDropdown === 'solutions' ? 'opacity-100 scale-100' : 'opacity-0 scale-95 pointer-events-none'}`}
+              >
+                {dropdownMenus.solutions.map((item) => (
+                  <a 
+                    key={item.href} 
+                    href={`#${item.href}`}
+                    onClick={(e) => handleDropdownClick(e, item.href)} 
+                    className="block px-4 py-2 text-sm text-zseetech-blue hover:bg-zseetech-teal/10 hover:text-zseetech-teal"
+                  >
+                    {item.label}
+                  </a>
+                ))}
+              </div>
             </div>
             
             {/* Industries Dropdown */}
             <div 
-              className="relative" 
+              className="relative group" 
               onMouseEnter={() => handleMouseEnter('industries')}
               onMouseLeave={handleMouseLeave}
             >
@@ -150,20 +167,20 @@ const Navbar = () => {
               >
                 Industries <ChevronDown size={16} className={`ml-1 transition-transform ${activeDropdown === 'industries' ? 'rotate-180' : ''}`} />
               </a>
-              {activeDropdown === 'industries' && (
-                <div className="absolute top-full left-0 mt-1 w-64 bg-white rounded-md shadow-lg border border-gray-100 py-2 z-50">
-                  {dropdownMenus.industries.map((item) => (
-                    <a 
-                      key={item.href} 
-                      href={`#${item.href}`}
-                      onClick={(e) => handleDropdownClick(e, item.href)} 
-                      className="block px-4 py-2 text-sm text-zseetech-blue hover:bg-zseetech-teal/10 hover:text-zseetech-teal"
-                    >
-                      {item.label}
-                    </a>
-                  ))}
-                </div>
-              )}
+              <div 
+                className={`absolute top-full left-0 mt-1 w-64 bg-white rounded-md shadow-lg border border-gray-100 py-2 z-50 transition-all duration-200 origin-top ${activeDropdown === 'industries' ? 'opacity-100 scale-100' : 'opacity-0 scale-95 pointer-events-none'}`}
+              >
+                {dropdownMenus.industries.map((item) => (
+                  <a 
+                    key={item.href} 
+                    href={`#${item.href}`}
+                    onClick={(e) => handleDropdownClick(e, item.href)} 
+                    className="block px-4 py-2 text-sm text-zseetech-blue hover:bg-zseetech-teal/10 hover:text-zseetech-teal"
+                  >
+                    {item.label}
+                  </a>
+                ))}
+              </div>
             </div>
             
             <a href="#about" onClick={(e) => handleNavClick(e, 'about')} className="text-zseetech-blue hover:text-zseetech-teal transition-colors">About Us</a>
@@ -194,73 +211,71 @@ const Navbar = () => {
       </div>
       
       {/* Mobile Navigation */}
-      {isMenuOpen && (
-        <div className="md:hidden bg-white shadow-md">
-          <div className="px-4 py-4 space-y-3">
-            <a href="#home" className="block px-3 py-2 text-zseetech-blue hover:bg-muted rounded-md" onClick={(e) => {e.preventDefault(); scrollToSection('home'); toggleMenu();}}>Home</a>
-            
-            {/* Mobile Services Menu */}
-            <div className="space-y-1">
-              <a href="#services" className="block px-3 py-2 text-zseetech-blue hover:bg-muted rounded-md" onClick={(e) => {e.preventDefault(); scrollToSection('services'); toggleMenu();}}>Services</a>
-              <div className="ml-4 pl-2 border-l-2 border-gray-200 space-y-1">
-                {dropdownMenus.services.map((item) => (
-                  <a 
-                    key={item.href} 
-                    href={`#${item.href}`}
-                    onClick={(e) => handleDropdownClick(e, item.href)} 
-                    className="block px-3 py-1 text-sm text-zseetech-blue hover:bg-muted rounded-md"
-                  >
-                    {item.label}
-                  </a>
-                ))}
-              </div>
+      <div className={`md:hidden bg-white shadow-md transition-all duration-300 ${isMenuOpen ? 'max-h-[80vh] overflow-y-auto' : 'max-h-0 overflow-hidden'}`}>
+        <div className="px-4 py-4 space-y-3">
+          <a href="#home" className="block px-3 py-2 text-zseetech-blue hover:bg-muted rounded-md" onClick={(e) => {e.preventDefault(); scrollToSection('home'); toggleMenu();}}>Home</a>
+          
+          {/* Mobile Services Menu */}
+          <div className="space-y-1">
+            <a href="#services" className="block px-3 py-2 text-zseetech-blue hover:bg-muted rounded-md" onClick={(e) => {e.preventDefault(); scrollToSection('services'); toggleMenu();}}>Services</a>
+            <div className="ml-4 pl-2 border-l-2 border-gray-200 space-y-1">
+              {dropdownMenus.services.map((item) => (
+                <a 
+                  key={item.href} 
+                  href={`#${item.href}`}
+                  onClick={(e) => handleDropdownClick(e, item.href)} 
+                  className="block px-3 py-1 text-sm text-zseetech-blue hover:bg-muted rounded-md"
+                >
+                  {item.label}
+                </a>
+              ))}
             </div>
-            
-            {/* Mobile Solutions Menu */}
-            <div className="space-y-1">
-              <a href="#solutions" className="block px-3 py-2 text-zseetech-blue hover:bg-muted rounded-md" onClick={(e) => {e.preventDefault(); scrollToSection('solutions'); toggleMenu();}}>Solutions</a>
-              <div className="ml-4 pl-2 border-l-2 border-gray-200 space-y-1">
-                {dropdownMenus.solutions.map((item) => (
-                  <a 
-                    key={item.href} 
-                    href={`#${item.href}`}
-                    onClick={(e) => handleDropdownClick(e, item.href)} 
-                    className="block px-3 py-1 text-sm text-zseetech-blue hover:bg-muted rounded-md"
-                  >
-                    {item.label}
-                  </a>
-                ))}
-              </div>
-            </div>
-            
-            {/* Mobile Industries Menu */}
-            <div className="space-y-1">
-              <a href="#industries" className="block px-3 py-2 text-zseetech-blue hover:bg-muted rounded-md" onClick={(e) => {e.preventDefault(); scrollToSection('industries'); toggleMenu();}}>Industries</a>
-              <div className="ml-4 pl-2 border-l-2 border-gray-200 space-y-1">
-                {dropdownMenus.industries.map((item) => (
-                  <a 
-                    key={item.href} 
-                    href={`#${item.href}`}
-                    onClick={(e) => handleDropdownClick(e, item.href)} 
-                    className="block px-3 py-1 text-sm text-zseetech-blue hover:bg-muted rounded-md"
-                  >
-                    {item.label}
-                  </a>
-                ))}
-              </div>
-            </div>
-            
-            <a href="#about" className="block px-3 py-2 text-zseetech-blue hover:bg-muted rounded-md" onClick={(e) => {e.preventDefault(); scrollToSection('about'); toggleMenu();}}>About Us</a>
-            <a href="#contact" className="block px-3 py-2 text-zseetech-blue hover:bg-muted rounded-md" onClick={(e) => {e.preventDefault(); scrollToSection('contact'); toggleMenu();}}>Contact</a>
-            <Button 
-              className="w-full bg-zseetech-teal-dark hover:bg-zseetech-blue-dark text-white"
-              onClick={() => {scrollToSection('get-in-touch'); toggleMenu();}}
-            >
-              Contact Us
-            </Button>
           </div>
+          
+          {/* Mobile Solutions Menu */}
+          <div className="space-y-1">
+            <a href="#solutions" className="block px-3 py-2 text-zseetech-blue hover:bg-muted rounded-md" onClick={(e) => {e.preventDefault(); scrollToSection('solutions'); toggleMenu();}}>Solutions</a>
+            <div className="ml-4 pl-2 border-l-2 border-gray-200 space-y-1">
+              {dropdownMenus.solutions.map((item) => (
+                <a 
+                  key={item.href} 
+                  href={`#${item.href}`}
+                  onClick={(e) => handleDropdownClick(e, item.href)} 
+                  className="block px-3 py-1 text-sm text-zseetech-blue hover:bg-muted rounded-md"
+                >
+                  {item.label}
+                </a>
+              ))}
+            </div>
+          </div>
+          
+          {/* Mobile Industries Menu */}
+          <div className="space-y-1">
+            <a href="#industries" className="block px-3 py-2 text-zseetech-blue hover:bg-muted rounded-md" onClick={(e) => {e.preventDefault(); scrollToSection('industries'); toggleMenu();}}>Industries</a>
+            <div className="ml-4 pl-2 border-l-2 border-gray-200 space-y-1">
+              {dropdownMenus.industries.map((item) => (
+                <a 
+                  key={item.href} 
+                  href={`#${item.href}`}
+                  onClick={(e) => handleDropdownClick(e, item.href)} 
+                  className="block px-3 py-1 text-sm text-zseetech-blue hover:bg-muted rounded-md"
+                >
+                  {item.label}
+                </a>
+              ))}
+            </div>
+          </div>
+          
+          <a href="#about" className="block px-3 py-2 text-zseetech-blue hover:bg-muted rounded-md" onClick={(e) => {e.preventDefault(); scrollToSection('about'); toggleMenu();}}>About Us</a>
+          <a href="#contact" className="block px-3 py-2 text-zseetech-blue hover:bg-muted rounded-md" onClick={(e) => {e.preventDefault(); scrollToSection('contact'); toggleMenu();}}>Contact</a>
+          <Button 
+            className="w-full bg-zseetech-teal-dark hover:bg-zseetech-blue-dark text-white"
+            onClick={() => {scrollToSection('get-in-touch'); toggleMenu();}}
+          >
+            Contact Us
+          </Button>
         </div>
-      )}
+      </div>
     </header>
   );
 };
