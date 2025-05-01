@@ -63,16 +63,14 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				// Custom colors for TechNexus
-				technexus: {
-					'blue': '#1E88E5',
-					'blue-light': '#64B5F6',
-					'blue-dark': '#0D47A1',
-					'teal': '#0EA5E9',
-					'teal-light': '#4DD0E1',
-					'teal-dark': '#0277BD',
-					'purple': '#9b87f5',
-					'gray': '#8E9196',
+				// Custom colors for ZSEE Tech
+				zseetech: {
+					'teal': '#00AA99',
+					'teal-light': '#00CCAA',
+					'teal-dark': '#008877',
+					'gray': '#333333',
+					'gray-light': '#666666',
+					'white': '#FFFFFF',
 				}
 			},
 			borderRadius: {
@@ -113,8 +111,9 @@ export default {
 				'slide-in-right': 'slide-in-right 0.5s ease-out'
 			},
 			backgroundImage: {
-				'hero-pattern': 'linear-gradient(135deg, #1E88E5 0%, #0EA5E9 100%)',
-				'service-gradient': 'linear-gradient(135deg, rgba(30,136,229,0.1) 0%, rgba(14,165,233,0.1) 100%)',
+				'hero-pattern': 'linear-gradient(135deg, #00CCAA 0%, #00AA99 100%)',
+				'service-gradient': 'linear-gradient(135deg, rgba(0,204,170,0.1) 0%, rgba(0,170,153,0.1) 100%)',
+				'mesh-pattern': 'url("/public/mesh-bg.svg")'
 			}
 		}
 	},

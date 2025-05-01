@@ -1,3 +1,4 @@
+
 import { Button } from '@/components/ui/button';
 import { BarChart4, Database, Globe, Layers, Shield, Smartphone } from 'lucide-react';
 
@@ -5,13 +6,13 @@ const SolutionItem = ({ icon, title, description }: { icon: React.ReactNode, tit
   return (
     <div className="flex gap-4">
       <div className="flex-shrink-0 mt-1">
-        <div className="w-10 h-10 bg-gradient-to-r from-technexus-blue to-technexus-teal rounded-lg flex items-center justify-center text-white">
+        <div className="w-10 h-10 bg-gradient-to-r from-zseetech-teal to-zseetech-teal-light rounded-lg flex items-center justify-center text-white">
           {icon}
         </div>
       </div>
       <div>
-        <h4 className="text-lg font-semibold text-gray-800 mb-2">{title}</h4>
-        <p className="text-gray-600">{description}</p>
+        <h4 className="text-lg font-semibold text-zseetech-gray mb-2">{title}</h4>
+        <p className="text-zseetech-gray-light">{description}</p>
       </div>
     </div>
   );
@@ -23,7 +24,7 @@ const Solutions = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="section-title">Platform Solutions</h2>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+          <p className="text-lg text-zseetech-gray-light max-w-3xl mx-auto">
             Our comprehensive software platforms enable intelligent monitoring, control, 
             and analysis of IoT data with customizable interfaces for any industry.
           </p>
@@ -32,7 +33,7 @@ const Solutions = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-20">
           <div>
             <h3 className="section-subtitle mb-6">White-Label IoT Platform</h3>
-            <p className="text-gray-600 mb-8">
+            <p className="text-zseetech-gray-light mb-8">
               Launch your own branded IoT platform with our white-label solution. Create a custom-branded 
               experience for your clients with your logo and colors while leveraging our powerful 
               infrastructure and features.
@@ -59,7 +60,7 @@ const Solutions = () => {
             </div>
             
             <div className="mt-8">
-              <Button className="bg-gradient-to-r from-technexus-blue to-technexus-teal text-white">
+              <Button className="bg-gradient-to-r from-zseetech-teal to-zseetech-teal-light text-white">
                 Learn More
               </Button>
             </div>
@@ -76,8 +77,8 @@ const Solutions = () => {
             </div>
             
             {/* Decorative elements */}
-            <div className="absolute -top-6 -right-6 w-24 h-24 rounded-full bg-technexus-blue-light/10"></div>
-            <div className="absolute -bottom-6 -left-6 w-32 h-32 rounded-full bg-technexus-teal-light/10"></div>
+            <div className="absolute -top-6 -right-6 w-24 h-24 rounded-full bg-zseetech-teal-light/10"></div>
+            <div className="absolute -bottom-6 -left-6 w-32 h-32 rounded-full bg-zseetech-teal/10"></div>
           </div>
         </div>
         
@@ -93,13 +94,13 @@ const Solutions = () => {
             </div>
             
             {/* Decorative elements */}
-            <div className="absolute -top-6 -left-6 w-24 h-24 rounded-full bg-technexus-blue-light/10"></div>
-            <div className="absolute -bottom-6 -right-6 w-32 h-32 rounded-full bg-technexus-teal-light/10"></div>
+            <div className="absolute -top-6 -left-6 w-24 h-24 rounded-full bg-zseetech-teal-light/10"></div>
+            <div className="absolute -bottom-6 -right-6 w-32 h-32 rounded-full bg-zseetech-teal/10"></div>
           </div>
           
           <div className="order-1 lg:order-2">
             <h3 className="section-subtitle mb-6">Dynamic Dashboard Solutions</h3>
-            <p className="text-gray-600 mb-8">
+            <p className="text-zseetech-gray-light mb-8">
               Visualize and interact with your IoT data through intuitive, customizable dashboards. 
               Monitor device status, analyze performance metrics, and gain actionable insights in real-time.
             </p>
@@ -125,7 +126,7 @@ const Solutions = () => {
             </div>
             
             <div className="mt-8">
-              <Button className="bg-gradient-to-r from-technexus-blue to-technexus-teal text-white">
+              <Button className="bg-gradient-to-r from-zseetech-teal to-zseetech-teal-light text-white">
                 View Demo
               </Button>
             </div>

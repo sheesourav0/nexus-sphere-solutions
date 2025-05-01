@@ -9,23 +9,23 @@ const Footer = () => {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           <div>
-            <h3 className="text-2xl font-bold mb-6 bg-gradient-to-r from-technexus-blue-light to-technexus-teal-light bg-clip-text text-transparent">
-              TechNexus
-            </h3>
+            <a href="#" className="flex items-center mb-6">
+              <img src="/public/zsee-logo.svg" alt="ZSEE Tech" className="h-8 filter brightness-0 invert" />
+            </a>
             <p className="text-gray-400 mb-6">
               Transforming tomorrow through connected innovation. Leading provider of IoT solutions for businesses worldwide.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-technexus-blue transition-colors">
+              <a href="#" className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-zseetech-teal transition-colors">
                 <Facebook size={20} />
               </a>
-              <a href="#" className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-technexus-blue transition-colors">
+              <a href="#" className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-zseetech-teal transition-colors">
                 <Twitter size={20} />
               </a>
-              <a href="#" className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-technexus-blue transition-colors">
+              <a href="#" className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-zseetech-teal transition-colors">
                 <Linkedin size={20} />
               </a>
-              <a href="#" className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-technexus-blue transition-colors">
+              <a href="#" className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-zseetech-teal transition-colors">
                 <Mail size={20} />
               </a>
             </div>
@@ -62,7 +62,7 @@ const Footer = () => {
             </p>
             <div className="flex space-x-2">
               <Input placeholder="Your email" className="bg-gray-800 border-gray-700 text-white" />
-              <Button className="bg-gradient-to-r from-technexus-blue to-technexus-teal text-white">
+              <Button className="bg-gradient-to-r from-zseetech-teal to-zseetech-teal-light text-white">
                 Subscribe
               </Button>
             </div>
@@ -72,7 +72,7 @@ const Footer = () => {
         <div className="border-t border-gray-800 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-500 text-sm mb-4 md:mb-0">
-              © 2025 TechNexus Solutions. All rights reserved.
+              © 2025 ZSEE Tech Solutions. All rights reserved.
             </p>
             <div className="flex space-x-6">
               <a href="#" className="text-gray-500 text-sm hover:text-white transition-colors">Privacy Policy</a>

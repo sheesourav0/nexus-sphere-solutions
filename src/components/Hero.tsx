@@ -6,7 +6,7 @@ const Hero = () => {
     <section id="home" className="relative pt-24 md:pt-32 pb-16 md:pb-24 overflow-hidden">
       {/* Background gradient with overlay pattern */}
       <div className="absolute inset-0 bg-hero-pattern opacity-95 z-0"></div>
-      <div className="absolute inset-0 bg-[url('/public/placeholder.svg')] bg-center bg-cover opacity-10 z-0"></div>
+      <div className="absolute inset-0 bg-mesh-pattern bg-center bg-cover opacity-70 z-0"></div>
       
       <div className="container relative mx-auto px-4 z-10">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-8 md:gap-12">
@@ -18,7 +18,7 @@ const Hero = () => {
               Comprehensive IoT solutions for industrial automation, smart monitoring, and data management that drive efficiency and growth in the connected era.
             </p>
             <div className="flex flex-col sm:flex-row justify-center lg:justify-start gap-4">
-              <Button size="lg" className="bg-white text-technexus-blue hover:bg-white/90">
+              <Button size="lg" className="bg-white text-zseetech-teal hover:bg-white/90">
                 Explore Solutions
               </Button>
               <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/20">
@@ -39,8 +39,8 @@ const Hero = () => {
               </div>
               
               {/* Floating elements for visual interest */}
-              <div className="absolute -top-6 -right-6 w-24 h-24 rounded-full bg-technexus-blue/20 backdrop-blur-md"></div>
-              <div className="absolute -bottom-8 -left-8 w-32 h-32 rounded-full bg-technexus-teal/20 backdrop-blur-md"></div>
+              <div className="absolute -top-6 -right-6 w-24 h-24 rounded-full bg-zseetech-teal-light/20 backdrop-blur-md"></div>
+              <div className="absolute -bottom-8 -left-8 w-32 h-32 rounded-full bg-zseetech-teal/20 backdrop-blur-md"></div>
             </div>
           </div>
         </div>

@@ -14,24 +14,24 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 210 100% 51%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 167 100% 33%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 195 94% 48%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 167 100% 40%;
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 167 20% 96.1%;
+    --muted-foreground: 167 10% 46.9%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 167 30% 96.1%;
+    --accent-foreground: 167 40% 20%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 210 100% 51%;
+    --border: 167 30% 91.4%;
+    --input: 167 30% 91.4%;
+    --ring: 167 100% 33%;
 
     --radius: 0.5rem;
   }
@@ -46,24 +46,24 @@
     --popover: 222.2 84% 4.9%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 210 100% 51%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 167 100% 33%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 195 94% 48%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 167 100% 40%;
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 167 32.6% 17.5%;
+    --muted-foreground: 167 20.2% 65.1%;
 
-    --accent: 217.2 32.6% 17.5%;
+    --accent: 167 32.6% 17.5%;
     --accent-foreground: 210 40% 98%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
+    --border: 167 32.6% 17.5%;
+    --input: 167 32.6% 17.5%;
+    --ring: 167 26.8% 83.9%;
   }
 }
 
@@ -79,7 +79,7 @@
 
 @layer components {
   .gradient-text {
-    @apply bg-gradient-to-r from-technexus-blue to-technexus-teal bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-zseetech-teal-light to-zseetech-teal bg-clip-text text-transparent;
   }
   
   .section-container {
@@ -91,7 +91,7 @@
   }
   
   .section-subtitle {
-    @apply text-xl md:text-2xl font-semibold mb-4 text-technexus-blue;
+    @apply text-xl md:text-2xl font-semibold mb-4 text-zseetech-teal;
   }
   
   .service-card {
@@ -99,6 +99,6 @@
   }
   
   .feature-icon {
-    @apply w-12 h-12 bg-gradient-to-r from-technexus-blue to-technexus-teal rounded-full flex items-center justify-center text-white mb-4;
+    @apply w-12 h-12 bg-gradient-to-r from-zseetech-teal-light to-zseetech-teal rounded-full flex items-center justify-center text-white mb-4;
   }
 }
