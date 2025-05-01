@@ -16,7 +16,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16 md:h-20">
           <div className="flex-shrink-0">
             <a href="#" className="flex items-center">
-              <img src="/public/zsee-logo.svg" alt="ZSEE Tech" className="h-10" />
+              <img src="/zsee-logo.svg" alt="ZSEE Tech" className="h-10" />
             </a>
           </div>
           
