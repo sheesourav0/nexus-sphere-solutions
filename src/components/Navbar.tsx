@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { ChevronDown, Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -57,7 +56,8 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16 md:h-20">
           <div className="flex-shrink-0">
             <a href="#" className="flex items-center">
-              <img src="/zsee-logo.svg" alt="ZSEE Tech" className="h-10" />
+              {/* Replace SVG with image */}
+              <img src="/zsee-logo.png" alt="ZSEE Tech" className="h-12" />
             </a>
           </div>
           

@@ -1,4 +1,3 @@
-
 import React, { useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -49,7 +48,8 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           <div>
             <a href="#" className="flex items-center mb-6">
-              <img src="/zsee-logo.svg" alt="ZSEE Tech" className="h-12 filter brightness-0 invert" />
+              {/* Replace SVG with image and adjust brightness filter */}
+              <img src="/zsee-logo.png" alt="ZSEE Tech" className="h-12 filter brightness-150" />
             </a>
             <p className="text-gray-400 mb-6">
               Transforming tomorrow through connected innovation. Leading provider of IoT solutions for businesses worldwide.
