@@ -23,13 +23,13 @@ const Index = () => {
       <Services />
       <Solutions />
       <DataServices />
-      <IoTGateways />
-      <FieldNetworking />
-      <ThreeDPrinting />
-      <IndustrialIntegration />
       <ReportGeneration />
       <CustomApps />
+      <IoTGateways />
+      <FieldNetworking />
+      <IndustrialIntegration />
       <HMIDisplay />
+      <ThreeDPrinting />
       <Industries />
       <Contact />
       <Footer />
