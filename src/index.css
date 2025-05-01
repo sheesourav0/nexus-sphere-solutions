@@ -6,64 +6,64 @@
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --foreground: 210 64% 15%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 210 64% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 210 64% 15%;
 
-    --primary: 167 100% 33%;
+    --primary: 210 64% 15%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 167 100% 40%;
+    --secondary: 142 45% 45%;
     --secondary-foreground: 0 0% 100%;
 
-    --muted: 167 20% 96.1%;
-    --muted-foreground: 167 10% 46.9%;
+    --muted: 210 20% 96.1%;
+    --muted-foreground: 210 10% 46.9%;
 
-    --accent: 167 30% 96.1%;
-    --accent-foreground: 167 40% 20%;
+    --accent: 142 30% 96.1%;
+    --accent-foreground: 142 40% 20%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 167 30% 91.4%;
-    --input: 167 30% 91.4%;
-    --ring: 167 100% 33%;
+    --border: 210 30% 91.4%;
+    --input: 210 30% 91.4%;
+    --ring: 210 64% 15%;
 
     --radius: 0.5rem;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
+    --background: 210 64% 15%;
     --foreground: 210 40% 98%;
 
-    --card: 222.2 84% 4.9%;
+    --card: 210 64% 15%;
     --card-foreground: 210 40% 98%;
 
-    --popover: 222.2 84% 4.9%;
+    --popover: 210 64% 15%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 167 100% 33%;
+    --primary: 210 64% 15%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 167 100% 40%;
+    --secondary: 142 45% 45%;
     --secondary-foreground: 0 0% 100%;
 
-    --muted: 167 32.6% 17.5%;
-    --muted-foreground: 167 20.2% 65.1%;
+    --muted: 210 32.6% 17.5%;
+    --muted-foreground: 210 20.2% 65.1%;
 
-    --accent: 167 32.6% 17.5%;
+    --accent: 142 32.6% 17.5%;
     --accent-foreground: 210 40% 98%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 167 32.6% 17.5%;
-    --input: 167 32.6% 17.5%;
-    --ring: 167 26.8% 83.9%;
+    --border: 210 32.6% 17.5%;
+    --input: 210 32.6% 17.5%;
+    --ring: 142 26.8% 83.9%;
   }
 }
 
@@ -79,7 +79,7 @@
 
 @layer components {
   .gradient-text {
-    @apply bg-gradient-to-r from-zseetech-teal-light to-zseetech-teal bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-zseetech-green-light to-zseetech-green bg-clip-text text-transparent;
   }
   
   .section-container {
@@ -87,11 +87,11 @@
   }
   
   .section-title {
-    @apply text-3xl md:text-4xl font-bold mb-6 md:mb-10 gradient-text;
+    @apply text-3xl md:text-4xl font-bold mb-6 md:mb-10 text-zseetech-blue-dark;
   }
   
   .section-subtitle {
-    @apply text-xl md:text-2xl font-semibold mb-4 text-zseetech-teal;
+    @apply text-xl md:text-2xl font-semibold mb-4 text-zseetech-green;
   }
   
   .service-card {
@@ -99,6 +99,6 @@
   }
   
   .feature-icon {
-    @apply w-12 h-12 bg-gradient-to-r from-zseetech-teal-light to-zseetech-teal rounded-full flex items-center justify-center text-white mb-4;
+    @apply w-12 h-12 bg-gradient-to-r from-zseetech-green-light to-zseetech-green rounded-full flex items-center justify-center text-white mb-4;
   }
 }

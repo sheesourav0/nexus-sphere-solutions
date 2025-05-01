@@ -22,23 +22,23 @@ const Navbar = () => {
           
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">
-            <a href="#home" className="text-zseetech-gray hover:text-zseetech-teal transition-colors">Home</a>
-            <a href="#services" className="text-zseetech-gray hover:text-zseetech-teal transition-colors">Services</a>
-            <a href="#solutions" className="text-zseetech-gray hover:text-zseetech-teal transition-colors">Solutions</a>
-            <a href="#industries" className="text-zseetech-gray hover:text-zseetech-teal transition-colors">Industries</a>
-            <a href="#about" className="text-zseetech-gray hover:text-zseetech-teal transition-colors">About Us</a>
-            <a href="#contact" className="text-zseetech-gray hover:text-zseetech-teal transition-colors">Contact</a>
+            <a href="#home" className="text-zseetech-blue hover:text-zseetech-green transition-colors">Home</a>
+            <a href="#services" className="text-zseetech-blue hover:text-zseetech-green transition-colors">Services</a>
+            <a href="#solutions" className="text-zseetech-blue hover:text-zseetech-green transition-colors">Solutions</a>
+            <a href="#industries" className="text-zseetech-blue hover:text-zseetech-green transition-colors">Industries</a>
+            <a href="#about" className="text-zseetech-blue hover:text-zseetech-green transition-colors">About Us</a>
+            <a href="#contact" className="text-zseetech-blue hover:text-zseetech-green transition-colors">Contact</a>
           </nav>
           
           <div className="hidden md:block">
-            <Button className="bg-gradient-to-r from-zseetech-teal to-zseetech-teal-light text-white">Contact Us</Button>
+            <Button className="bg-gradient-to-r from-zseetech-green to-zseetech-green-light text-white">Contact Us</Button>
           </div>
           
           {/* Mobile menu button */}
           <div className="md:hidden">
             <button 
               type="button" 
-              className="text-zseetech-gray"
+              className="text-zseetech-blue"
               onClick={toggleMenu}
             >
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -51,13 +51,13 @@ const Navbar = () => {
       {isMenuOpen && (
         <div className="md:hidden bg-white shadow-md">
           <div className="px-4 py-4 space-y-3">
-            <a href="#home" className="block px-3 py-2 text-zseetech-gray hover:bg-muted rounded-md" onClick={toggleMenu}>Home</a>
-            <a href="#services" className="block px-3 py-2 text-zseetech-gray hover:bg-muted rounded-md" onClick={toggleMenu}>Services</a>
-            <a href="#solutions" className="block px-3 py-2 text-zseetech-gray hover:bg-muted rounded-md" onClick={toggleMenu}>Solutions</a>
-            <a href="#industries" className="block px-3 py-2 text-zseetech-gray hover:bg-muted rounded-md" onClick={toggleMenu}>Industries</a>
-            <a href="#about" className="block px-3 py-2 text-zseetech-gray hover:bg-muted rounded-md" onClick={toggleMenu}>About Us</a>
-            <a href="#contact" className="block px-3 py-2 text-zseetech-gray hover:bg-muted rounded-md" onClick={toggleMenu}>Contact</a>
-            <Button className="w-full bg-gradient-to-r from-zseetech-teal to-zseetech-teal-light text-white">Contact Us</Button>
+            <a href="#home" className="block px-3 py-2 text-zseetech-blue hover:bg-muted rounded-md" onClick={toggleMenu}>Home</a>
+            <a href="#services" className="block px-3 py-2 text-zseetech-blue hover:bg-muted rounded-md" onClick={toggleMenu}>Services</a>
+            <a href="#solutions" className="block px-3 py-2 text-zseetech-blue hover:bg-muted rounded-md" onClick={toggleMenu}>Solutions</a>
+            <a href="#industries" className="block px-3 py-2 text-zseetech-blue hover:bg-muted rounded-md" onClick={toggleMenu}>Industries</a>
+            <a href="#about" className="block px-3 py-2 text-zseetech-blue hover:bg-muted rounded-md" onClick={toggleMenu}>About Us</a>
+            <a href="#contact" className="block px-3 py-2 text-zseetech-blue hover:bg-muted rounded-md" onClick={toggleMenu}>Contact</a>
+            <Button className="w-full bg-gradient-to-r from-zseetech-green to-zseetech-green-light text-white">Contact Us</Button>
           </div>
         </div>
       )}
