@@ -1,5 +1,5 @@
 
-import { FileChart, FileText, Chart, Settings } from 'lucide-react';
+import { FileBarChart, FileText, BarChart, Settings } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const ReportGeneration = () => {
@@ -9,7 +9,7 @@ const ReportGeneration = () => {
         <div className="text-center mb-16">
           <div className="flex justify-center mb-4">
             <div className="bg-gradient-to-r from-zseetech-teal-light to-zseetech-teal p-4 rounded-full">
-              <FileChart className="w-12 h-12 text-white" />
+              <FileBarChart className="w-12 h-12 text-white" />
             </div>
           </div>
           <h2 className="section-title">Custom Report Generation</h2>
@@ -96,7 +96,7 @@ const ReportGeneration = () => {
                 <div className="flex gap-4">
                   <div className="flex-shrink-0 mt-1">
                     <div className="w-12 h-12 bg-zseetech-teal/10 rounded-lg flex items-center justify-center">
-                      <Chart className="w-6 h-6 text-zseetech-teal" />
+                      <BarChart className="w-6 h-6 text-zseetech-teal" />
                     </div>
                   </div>
                   <div>

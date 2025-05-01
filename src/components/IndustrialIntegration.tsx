@@ -1,6 +1,5 @@
-
 import { Button } from '@/components/ui/button';
-import { Server, FileChart, Database, Settings } from 'lucide-react';
+import { Server, FileBarChart, Database, Settings } from 'lucide-react';
 
 const IntegrationCard = ({ icon, title, description }: { icon: React.ReactNode, title: string, description: string }) => {
   return (
