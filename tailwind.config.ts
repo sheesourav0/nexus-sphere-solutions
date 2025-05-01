@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,6 +62,17 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				// Custom colors for TechNexus
+				technexus: {
+					'blue': '#1E88E5',
+					'blue-light': '#64B5F6',
+					'blue-dark': '#0D47A1',
+					'teal': '#0EA5E9',
+					'teal-light': '#4DD0E1',
+					'teal-dark': '#0277BD',
+					'purple': '#9b87f5',
+					'gray': '#8E9196',
 				}
 			},
 			borderRadius: {
@@ -84,11 +96,25 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'fade-in': {
+					'0%': { opacity: '0' },
+					'100%': { opacity: '1' }
+				},
+				'slide-in-right': {
+					'0%': { transform: 'translateX(100%)', opacity: '0' },
+					'100%': { transform: 'translateX(0)', opacity: '1' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'fade-in': 'fade-in 0.5s ease-out',
+				'slide-in-right': 'slide-in-right 0.5s ease-out'
+			},
+			backgroundImage: {
+				'hero-pattern': 'linear-gradient(135deg, #1E88E5 0%, #0EA5E9 100%)',
+				'service-gradient': 'linear-gradient(135deg, rgba(30,136,229,0.1) 0%, rgba(14,165,233,0.1) 100%)',
 			}
 		}
 	},
