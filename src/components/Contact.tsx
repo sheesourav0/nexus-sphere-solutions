@@ -82,7 +82,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h4 className="text-lg font-medium text-gray-800">Our Location</h4>
-                  <p className="text-gray-600">123 Tech Park, Innovation Street<br />Silicon Valley, CA 94043</p>
+                  <p className="text-gray-600">03rd Floor. The Institution Of Engineers Building,<br />Panbazar, Guwahati.781001, Assam, INDIA</p>
                 </div>
               </div>
               
@@ -94,7 +94,9 @@ const Contact = () => {
                 </div>
                 <div>
                   <h4 className="text-lg font-medium text-gray-800">Email Us</h4>
-                  <p className="text-gray-600">info@technexus-solutions.com<br />support@technexus-solutions.com</p>
+                  <p className="text-gray-600">
+                    <a href="mailto:souravshee@zsee.org" className="hover:text-technexus-blue">souravshee@zsee.org</a>
+                  </p>
                 </div>
               </div>
               
@@ -106,7 +108,10 @@ const Contact = () => {
                 </div>
                 <div>
                   <h4 className="text-lg font-medium text-gray-800">Call Us</h4>
-                  <p className="text-gray-600">+1 (555) 123-4567<br />+1 (555) 987-6543</p>
+                  <p className="text-gray-600">
+                    <a href="tel:+917099041030" className="hover:text-technexus-blue">+91 7099041030</a><br />
+                    WhatsApp: <a href="https://wa.me/918669027592" className="hover:text-technexus-blue">+91 8669027592</a>
+                  </p>
                 </div>
               </div>
             </div>
