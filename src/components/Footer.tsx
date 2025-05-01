@@ -101,7 +101,7 @@ const Footer = () => {
             </p>
             <div className="flex space-x-2">
               <Input placeholder="Your email" className="bg-gray-800 border-gray-700 text-white" />
-              <Button className="bg-zseetech-blue hover:bg-zseetech-blue-dark text-white">
+              <Button className="bg-zseetech-teal-dark hover:bg-zseetech-blue-dark text-white">
                 Subscribe
               </Button>
             </div>

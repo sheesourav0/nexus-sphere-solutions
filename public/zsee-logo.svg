@@ -1,8 +1,10 @@
 
 <svg width="200" height="60" viewBox="0 0 200 60" fill="none" xmlns="http://www.w3.org/2000/svg">
   <!-- Blue triangle and green checkmark logo -->
-  <g transform="translate(10, 5) scale(0.4)">
+  <g transform="translate(10, 5) scale(0.45)">
+    <!-- Blue triangle -->
     <path d="M0 0 L120 0 L60 100 Z" fill="#0A2846"/>
+    <!-- Green checkmark -->
     <path d="M120 0 L180 70 L120 130 L60 100 Z" fill="#4CAF50"/>
   </g>
   
