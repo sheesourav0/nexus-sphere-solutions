@@ -31,7 +31,7 @@ const Navbar = () => {
           </nav>
           
           <div className="hidden md:block">
-            <Button className="bg-gradient-to-r from-zseetech-blue to-zseetech-teal text-white">Contact Us</Button>
+            <Button className="bg-zseetech-blue hover:bg-zseetech-blue-dark text-white">Contact Us</Button>
           </div>
           
           {/* Mobile menu button */}
@@ -57,7 +57,7 @@ const Navbar = () => {
             <a href="#industries" className="block px-3 py-2 text-zseetech-blue hover:bg-muted rounded-md" onClick={toggleMenu}>Industries</a>
             <a href="#about" className="block px-3 py-2 text-zseetech-blue hover:bg-muted rounded-md" onClick={toggleMenu}>About Us</a>
             <a href="#contact" className="block px-3 py-2 text-zseetech-blue hover:bg-muted rounded-md" onClick={toggleMenu}>Contact</a>
-            <Button className="w-full bg-gradient-to-r from-zseetech-blue to-zseetech-teal text-white">Contact Us</Button>
+            <Button className="w-full bg-zseetech-blue hover:bg-zseetech-blue-dark text-white">Contact Us</Button>
           </div>
         </div>
       )}
