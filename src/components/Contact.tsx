@@ -15,7 +15,7 @@ const Contact = () => {
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-        <div className="bg-white rounded-xl shadow-lg p-8">
+        <div id="get-in-touch" className="bg-white rounded-xl shadow-lg p-8">
           <h3 className="text-2xl font-semibold text-technexus-blue-dark mb-6">Send Us a Message</h3>
           
           <form className="space-y-4">

@@ -1,5 +1,6 @@
 
 import { Button } from '@/components/ui/button';
+import { scrollToSection } from '@/utils/scrollUtils';
 
 const Hero = () => {
   return (
@@ -18,10 +19,19 @@ const Hero = () => {
               Comprehensive IoT solutions for industrial automation, smart monitoring, and data management that drive efficiency and growth in the connected era.
             </p>
             <div className="flex flex-col sm:flex-row justify-center lg:justify-start gap-4">
-              <Button size="lg" className="bg-zseetech-teal-dark text-white hover:bg-zseetech-blue-dark">
+              <Button 
+                size="lg" 
+                className="bg-zseetech-teal-dark text-white hover:bg-zseetech-blue-dark"
+                onClick={() => scrollToSection('solutions')}
+              >
                 Explore Solutions
               </Button>
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/20">
+              <Button 
+                size="lg" 
+                variant="outline" 
+                className="border-white text-white hover:bg-white/20"
+                onClick={() => scrollToSection('get-in-touch')}
+              >
                 Contact Us
               </Button>
             </div>

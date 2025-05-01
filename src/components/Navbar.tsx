@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import { ChevronDown, Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { scrollToSection } from '@/utils/scrollUtils';
 
 // Define dropdown menu types
 type DropdownItem = {
@@ -24,22 +25,22 @@ const Navbar = () => {
   // Dropdown menu data
   const dropdownMenus: DropdownMenuData = {
     services: [
-      { label: 'IoT Connectivity', href: '#iot-connectivity' },
-      { label: 'Remote Monitoring', href: '#remote-monitoring' },
-      { label: 'Custom IoT Development', href: '#custom-iot' },
-      { label: '3D Printing', href: '#3d-printing' },
+      { label: 'IoT Connectivity', href: 'iot-connectivity' },
+      { label: 'Remote Monitoring', href: 'remote-monitoring' },
+      { label: 'Custom IoT Development', href: 'custom-iot' },
+      { label: '3D Printing', href: 'printing-3d' },
     ],
     solutions: [
-      { label: 'White-Label IoT Platform', href: '#white-label' },
-      { label: 'Dynamic Dashboard Solutions', href: '#dashboards' },
-      { label: 'Custom Applications', href: '#custom-apps' },
-      { label: 'Report Generation', href: '#reports' },
+      { label: 'White-Label IoT Platform', href: 'white-label' },
+      { label: 'Dynamic Dashboard Solutions', href: 'dashboards' },
+      { label: 'Custom Applications', href: 'custom-apps' },
+      { label: 'Report Generation', href: 'reports' },
     ],
     industries: [
-      { label: 'Manufacturing', href: '#manufacturing' },
-      { label: 'Healthcare', href: '#healthcare' },
-      { label: 'Smart City', href: '#smart-city' },
-      { label: 'Agriculture', href: '#agriculture' },
+      { label: 'Manufacturing', href: 'manufacturing' },
+      { label: 'Healthcare', href: 'healthcare' },
+      { label: 'Smart City', href: 'smart-city' },
+      { label: 'Agriculture', href: 'agriculture' },
     ],
   };
   
@@ -51,19 +52,30 @@ const Navbar = () => {
     setActiveDropdown(null);
   };
 
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, sectionId: string) => {
+    e.preventDefault();
+    scrollToSection(sectionId);
+  };
+
+  const handleDropdownClick = (e: React.MouseEvent<HTMLAnchorElement>, sectionId: string) => {
+    e.preventDefault();
+    scrollToSection(sectionId);
+    setActiveDropdown(null);
+  };
+
   return (
     <header className="fixed w-full bg-white/80 backdrop-blur-md z-50 shadow-sm">
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex items-center justify-between h-16 md:h-20">
           <div className="flex-shrink-0">
-            <a href="#" className="flex items-center">
+            <a href="#" onClick={(e) => handleNavClick(e, 'home')} className="flex items-center">
               <img src="/zsee-logo.svg" alt="ZSEE Tech" className="h-10 md:h-12 w-auto" />
             </a>
           </div>
           
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">
-            <a href="#home" className="text-zseetech-blue hover:text-zseetech-teal transition-colors">Home</a>
+            <a href="#home" onClick={(e) => handleNavClick(e, 'home')} className="text-zseetech-blue hover:text-zseetech-teal transition-colors">Home</a>
             
             {/* Services Dropdown */}
             <div 
@@ -71,7 +83,7 @@ const Navbar = () => {
               onMouseEnter={() => handleMouseEnter('services')}
               onMouseLeave={handleMouseLeave}
             >
-              <a href="#services" className="text-zseetech-blue hover:text-zseetech-teal transition-colors flex items-center">
+              <a href="#services" onClick={(e) => handleNavClick(e, 'services')} className="text-zseetech-blue hover:text-zseetech-teal transition-colors flex items-center">
                 Services <ChevronDown size={16} className="ml-1" />
               </a>
               {activeDropdown === 'services' && (
@@ -79,7 +91,8 @@ const Navbar = () => {
                   {dropdownMenus.services.map((item) => (
                     <a 
                       key={item.href} 
-                      href={item.href} 
+                      href={`#${item.href}`}
+                      onClick={(e) => handleDropdownClick(e, item.href)} 
                       className="block px-4 py-2 text-sm text-zseetech-blue hover:bg-zseetech-teal/10 hover:text-zseetech-teal"
                     >
                       {item.label}
@@ -95,7 +108,7 @@ const Navbar = () => {
               onMouseEnter={() => handleMouseEnter('solutions')}
               onMouseLeave={handleMouseLeave}
             >
-              <a href="#solutions" className="text-zseetech-blue hover:text-zseetech-teal transition-colors flex items-center">
+              <a href="#solutions" onClick={(e) => handleNavClick(e, 'solutions')} className="text-zseetech-blue hover:text-zseetech-teal transition-colors flex items-center">
                 Solutions <ChevronDown size={16} className="ml-1" />
               </a>
               {activeDropdown === 'solutions' && (
@@ -103,7 +116,8 @@ const Navbar = () => {
                   {dropdownMenus.solutions.map((item) => (
                     <a 
                       key={item.href} 
-                      href={item.href} 
+                      href={`#${item.href}`}
+                      onClick={(e) => handleDropdownClick(e, item.href)} 
                       className="block px-4 py-2 text-sm text-zseetech-blue hover:bg-zseetech-teal/10 hover:text-zseetech-teal"
                     >
                       {item.label}
@@ -119,7 +133,7 @@ const Navbar = () => {
               onMouseEnter={() => handleMouseEnter('industries')}
               onMouseLeave={handleMouseLeave}
             >
-              <a href="#industries" className="text-zseetech-blue hover:text-zseetech-teal transition-colors flex items-center">
+              <a href="#industries" onClick={(e) => handleNavClick(e, 'industries')} className="text-zseetech-blue hover:text-zseetech-teal transition-colors flex items-center">
                 Industries <ChevronDown size={16} className="ml-1" />
               </a>
               {activeDropdown === 'industries' && (
@@ -127,7 +141,8 @@ const Navbar = () => {
                   {dropdownMenus.industries.map((item) => (
                     <a 
                       key={item.href} 
-                      href={item.href} 
+                      href={`#${item.href}`}
+                      onClick={(e) => handleDropdownClick(e, item.href)} 
                       className="block px-4 py-2 text-sm text-zseetech-blue hover:bg-zseetech-teal/10 hover:text-zseetech-teal"
                     >
                       {item.label}
@@ -137,12 +152,17 @@ const Navbar = () => {
               )}
             </div>
             
-            <a href="#about" className="text-zseetech-blue hover:text-zseetech-teal transition-colors">About Us</a>
-            <a href="#contact" className="text-zseetech-blue hover:text-zseetech-teal transition-colors">Contact</a>
+            <a href="#about" onClick={(e) => handleNavClick(e, 'about')} className="text-zseetech-blue hover:text-zseetech-teal transition-colors">About Us</a>
+            <a href="#contact" onClick={(e) => handleNavClick(e, 'contact')} className="text-zseetech-blue hover:text-zseetech-teal transition-colors">Contact</a>
           </nav>
           
           <div className="hidden md:block">
-            <Button className="bg-zseetech-teal-dark hover:bg-zseetech-blue-dark text-white">Contact Us</Button>
+            <Button 
+              className="bg-zseetech-teal-dark hover:bg-zseetech-blue-dark text-white"
+              onClick={() => scrollToSection('get-in-touch')}
+            >
+              Contact Us
+            </Button>
           </div>
           
           {/* Mobile menu button */}
@@ -151,6 +171,7 @@ const Navbar = () => {
               type="button" 
               className="text-zseetech-blue"
               onClick={toggleMenu}
+              aria-label="Toggle menu"
             >
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -162,13 +183,18 @@ const Navbar = () => {
       {isMenuOpen && (
         <div className="md:hidden bg-white shadow-md">
           <div className="px-4 py-4 space-y-3">
-            <a href="#home" className="block px-3 py-2 text-zseetech-blue hover:bg-muted rounded-md" onClick={toggleMenu}>Home</a>
-            <a href="#services" className="block px-3 py-2 text-zseetech-blue hover:bg-muted rounded-md" onClick={toggleMenu}>Services</a>
-            <a href="#solutions" className="block px-3 py-2 text-zseetech-blue hover:bg-muted rounded-md" onClick={toggleMenu}>Solutions</a>
-            <a href="#industries" className="block px-3 py-2 text-zseetech-blue hover:bg-muted rounded-md" onClick={toggleMenu}>Industries</a>
-            <a href="#about" className="block px-3 py-2 text-zseetech-blue hover:bg-muted rounded-md" onClick={toggleMenu}>About Us</a>
-            <a href="#contact" className="block px-3 py-2 text-zseetech-blue hover:bg-muted rounded-md" onClick={toggleMenu}>Contact</a>
-            <Button className="w-full bg-zseetech-teal-dark hover:bg-zseetech-blue-dark text-white">Contact Us</Button>
+            <a href="#home" className="block px-3 py-2 text-zseetech-blue hover:bg-muted rounded-md" onClick={(e) => {e.preventDefault(); scrollToSection('home'); toggleMenu();}}>Home</a>
+            <a href="#services" className="block px-3 py-2 text-zseetech-blue hover:bg-muted rounded-md" onClick={(e) => {e.preventDefault(); scrollToSection('services'); toggleMenu();}}>Services</a>
+            <a href="#solutions" className="block px-3 py-2 text-zseetech-blue hover:bg-muted rounded-md" onClick={(e) => {e.preventDefault(); scrollToSection('solutions'); toggleMenu();}}>Solutions</a>
+            <a href="#industries" className="block px-3 py-2 text-zseetech-blue hover:bg-muted rounded-md" onClick={(e) => {e.preventDefault(); scrollToSection('industries'); toggleMenu();}}>Industries</a>
+            <a href="#about" className="block px-3 py-2 text-zseetech-blue hover:bg-muted rounded-md" onClick={(e) => {e.preventDefault(); scrollToSection('about'); toggleMenu();}}>About Us</a>
+            <a href="#contact" className="block px-3 py-2 text-zseetech-blue hover:bg-muted rounded-md" onClick={(e) => {e.preventDefault(); scrollToSection('contact'); toggleMenu();}}>Contact</a>
+            <Button 
+              className="w-full bg-zseetech-teal-dark hover:bg-zseetech-blue-dark text-white"
+              onClick={() => {scrollToSection('get-in-touch'); toggleMenu();}}
+            >
+              Contact Us
+            </Button>
           </div>
         </div>
       )}
