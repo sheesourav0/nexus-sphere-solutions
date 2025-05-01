@@ -1,7 +1,8 @@
+
 import React, { useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import { Facebook, Linkedin, Mail, Twitter } from 'lucide-react';
+import { Facebook, Linkedin, Mail, Twitter, Phone } from 'lucide-react';
 
 const Footer = () => {
   useEffect(() => {
@@ -105,17 +106,20 @@ const Footer = () => {
               </Button>
             </div>
             <div className="mt-6">
-              <p className="text-gray-400 text-sm">Service Tel: +852-91464856</p>
-              <p className="text-gray-400 text-sm">Service Email: info@zseetech.com</p>
+              <p className="text-gray-400 text-sm">Email: <a href="mailto:souravshee@zsee.org" className="hover:text-white">souravshee@zsee.org</a></p>
+              <p className="text-gray-400 text-sm">Phone: <a href="tel:+917099041030" className="hover:text-white">+91 7099041030</a></p>
+              <p className="text-gray-400 text-sm">WhatsApp: <a href="https://wa.me/918669027592" className="hover:text-white">+91 8669027592</a></p>
             </div>
           </div>
         </div>
         
         <div className="border-t border-gray-800 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-gray-500 text-sm mb-4 md:mb-0">
-              © 2025 ZSEE Tech Solutions. All rights reserved.
-            </p>
+            <div className="text-gray-500 text-sm mb-4 md:mb-0">
+              <p>© 2025 ZSEE SMART SOLUTIONS INDIA PVT LTD. All rights reserved.</p>
+              <p>GST: 32AABCZ1684M1Z0</p>
+              <p>North East Office: 03rd Floor. The Institution Of Engineers Building, Panbazar, Guwahati.781001, Assam, INDIA</p>
+            </div>
             <div className="flex space-x-6">
               <a href="#" className="text-gray-500 text-sm hover:text-white transition-colors">Privacy Policy</a>
               <a href="#" className="text-gray-500 text-sm hover:text-white transition-colors">Terms of Service</a>
