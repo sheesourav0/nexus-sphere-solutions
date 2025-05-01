@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
@@ -117,7 +116,7 @@ const HMIDisplay = () => {
                 "Multi-level user authentication and permissions",
                 "Customizable dashboards for different roles"
               ]}
-              imageClass="bg-[url('https://images.unsplash.com/photo-1581092160607-ee22731c9c9c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] bg-cover bg-center"
+              imageClass="bg-[url('https://www.ieiworld.com/_images/product/items/603_1.png?t=2025-05-01_21')] bg-cover bg-center"
               icon={<Grid3X3 className="w-6 h-6 text-white" />}
             />
           </TabsContent>
@@ -133,7 +132,7 @@ const HMIDisplay = () => {
                 "Voice assistant compatibility",
                 "Family-friendly user profiles and permissions"
               ]}
-              imageClass="bg-[url('https://images.unsplash.com/photo-1558002038-1055907df827?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] bg-cover bg-center"
+              imageClass="bg-[url('https://www.behance.net/gallery/9080423/HEIMA-Smart-Home-Automation-UI-Concept/modules/377101721')] bg-cover bg-center"
               icon={<Lightbulb className="w-6 h-6 text-white" />}
             />
           </TabsContent>
