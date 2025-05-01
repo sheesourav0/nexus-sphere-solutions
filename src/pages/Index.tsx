@@ -10,6 +10,7 @@ import IoTGateways from "@/components/IoTGateways";
 import ThreeDPrinting from "@/components/ThreeDPrinting";
 import IndustrialIntegration from "@/components/IndustrialIntegration";
 import ReportGeneration from "@/components/ReportGeneration";
+import HMIDisplay from "@/components/HMIDisplay";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
@@ -26,6 +27,7 @@ const Index = () => {
       <IndustrialIntegration />
       <ReportGeneration />
       <CustomApps />
+      <HMIDisplay />
       <Industries />
       <Contact />
       <Footer />
