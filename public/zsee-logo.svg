@@ -1,11 +1,21 @@
 
-<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+<svg width="240" height="80" viewBox="0 0 240 80" xmlns="http://www.w3.org/2000/svg">
   <!-- Background gradient rectangle with rounded corners -->
-  <rect width="200" height="200" rx="40" fill="url(#gradient)" />
+  <rect width="80" height="80" rx="20" fill="url(#gradient)" />
   
-  <!-- Text "zsee" -->
-  <text x="40" y="120" font-family="Arial, sans-serif" font-size="60" font-weight="bold" fill="white">
+  <!-- Text "zsee" in the blue square -->
+  <text x="15" y="50" font-family="Montserrat, Arial, sans-serif" font-size="24" font-weight="800" fill="white">
     zsee
+  </text>
+  
+  <!-- Text "ZSEE TECH" with shadow effect -->
+  <text x="94" y="40" font-family="Montserrat, Arial, sans-serif" font-size="28" font-weight="800" fill="black" style="filter: drop-shadow(2px 2px 1px rgba(0,0,0,0.3));">
+    ZSEE TECH
+  </text>
+  
+  <!-- Slogan text with Futura font -->
+  <text x="95" y="65" font-family="Futura, Arial, sans-serif" font-size="14" letter-spacing="1" fill="black">
+    FUTURE IN EVERY BYTE
   </text>
   
   <!-- Define the gradient -->
