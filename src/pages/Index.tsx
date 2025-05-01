@@ -7,6 +7,7 @@ import DataServices from "@/components/DataServices";
 import CustomApps from "@/components/CustomApps";
 import Industries from "@/components/Industries";
 import IoTGateways from "@/components/IoTGateways";
+import ThreeDPrinting from "@/components/ThreeDPrinting";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
@@ -19,6 +20,7 @@ const Index = () => {
       <Solutions />
       <DataServices />
       <IoTGateways />
+      <ThreeDPrinting />
       <CustomApps />
       <Industries />
       <Contact />
