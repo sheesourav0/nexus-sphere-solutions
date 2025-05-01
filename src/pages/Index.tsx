@@ -6,6 +6,7 @@ import Solutions from "@/components/Solutions";
 import DataServices from "@/components/DataServices";
 import CustomApps from "@/components/CustomApps";
 import Industries from "@/components/Industries";
+import IoTGateways from "@/components/IoTGateways";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
@@ -17,6 +18,7 @@ const Index = () => {
       <Services />
       <Solutions />
       <DataServices />
+      <IoTGateways />
       <CustomApps />
       <Industries />
       <Contact />

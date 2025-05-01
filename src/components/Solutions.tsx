@@ -1,6 +1,5 @@
-
 import { Button } from '@/components/ui/button';
-import { BarChart4, Database, Globe, Layers, Shield, Smartphone } from 'lucide-react';
+import { BarChart4, Database, Globe, Layers, Shield, Smartphone as SmartphoneIcon } from 'lucide-react';
 
 const SolutionItem = ({ icon, title, description }: { icon: React.ReactNode, title: string, description: string }) => {
   return (
@@ -119,7 +118,7 @@ const Solutions = () => {
               />
               
               <SolutionItem 
-                icon={<Smartphone size={20} />}
+                icon={<SmartphoneIcon size={20} />}
                 title="Mobile Applications"
                 description="Native iOS and Android apps with offline capabilities for monitoring on the go."
               />

@@ -1,5 +1,5 @@
 
-import { Building, Factory, Home, Leaf, ShieldCheck, Truck } from 'lucide-react';
+import { Building, Factory, Home, Hospital, Leaf, ShieldCheck, Truck } from 'lucide-react';
 
 type IndustryCardProps = {
   icon: React.ReactNode;
@@ -9,7 +9,7 @@ type IndustryCardProps = {
 const IndustryCard = ({ icon, title }: IndustryCardProps) => {
   return (
     <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow flex flex-col items-center text-center">
-      <div className="w-16 h-16 bg-gradient-to-r from-technexus-blue-light to-technexus-teal-light rounded-full flex items-center justify-center text-white mb-4">
+      <div className="w-16 h-16 bg-gradient-to-r from-zseetech-teal-light to-zseetech-teal rounded-full flex items-center justify-center text-white mb-4">
         {icon}
       </div>
       <h3 className="text-lg font-semibold text-gray-800">{title}</h3>
@@ -42,7 +42,7 @@ const Industries = () => {
           title="Agriculture"
         />
         <IndustryCard
-          icon={<ShieldCheck size={32} />}
+          icon={<Hospital size={32} />}
           title="Healthcare"
         />
         <IndustryCard
