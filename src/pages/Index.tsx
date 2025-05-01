@@ -11,6 +11,7 @@ import ThreeDPrinting from "@/components/ThreeDPrinting";
 import IndustrialIntegration from "@/components/IndustrialIntegration";
 import ReportGeneration from "@/components/ReportGeneration";
 import HMIDisplay from "@/components/HMIDisplay";
+import FieldNetworking from "@/components/FieldNetworking";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
@@ -23,6 +24,7 @@ const Index = () => {
       <Solutions />
       <DataServices />
       <IoTGateways />
+      <FieldNetworking />
       <ThreeDPrinting />
       <IndustrialIntegration />
       <ReportGeneration />
