@@ -1,4 +1,3 @@
-
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Network, Wifi, Radio, Globe, Signal, Server } from 'lucide-react';
@@ -65,23 +64,35 @@ const FieldNetworking = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-          <TechnologyCard
-            icon={<Radio size={24} />}
-            title="LoRaWAN"
-            description="Low-power wide-area network protocol designed for long-range, battery-efficient communications with minimal infrastructure requirements."
-            range="Up to 15km in rural areas, 2-5km in urban environments"
-            applications={["Utility Metering", "Agriculture Monitoring", "Asset Tracking", "Environmental Sensing"]}
-          />
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+          <div className="rounded-xl overflow-hidden shadow-lg h-[400px] relative">
+            <img 
+              src="https://cdn-source.adlinktech.com/WebUpd/en/Upload/Industrial_IoT_gateway/IIoT_Gateway_Second_v3.gif" 
+              alt="Field Network Solutions" 
+              className="w-full h-full object-cover"
+            />
+          </div>
           
-          <TechnologyCard
-            icon={<Signal size={24} />}
-            title="Cellular IoT (NB-IoT/LTE-M)"
-            description="Leveraging existing cellular infrastructure for reliable, widespread connectivity with improved indoor penetration and power efficiency."
-            range="Nationwide coverage through cellular networks"
-            applications={["Remote Monitoring", "Fleet Management", "Smart City Infrastructure", "Wearable Devices"]}
-          />
-          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <TechnologyCard
+              icon={<Radio size={24} />}
+              title="LoRaWAN"
+              description="Low-power wide-area network protocol designed for long-range, battery-efficient communications with minimal infrastructure requirements."
+              range="Up to 15km in rural areas, 2-5km in urban environments"
+              applications={["Utility Metering", "Agriculture Monitoring", "Asset Tracking", "Environmental Sensing"]}
+            />
+            
+            <TechnologyCard
+              icon={<Signal size={24} />}
+              title="Cellular IoT (NB-IoT/LTE-M)"
+              description="Leveraging existing cellular infrastructure for reliable, widespread connectivity with improved indoor penetration and power efficiency."
+              range="Nationwide coverage through cellular networks"
+              applications={["Remote Monitoring", "Fleet Management", "Smart City Infrastructure", "Wearable Devices"]}
+            />
+          </div>
+        </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">
           <TechnologyCard
             icon={<Wifi size={24} />}
             title="Mesh Networks"

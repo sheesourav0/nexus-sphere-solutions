@@ -1,3 +1,4 @@
+
 import { Button } from '@/components/ui/button';
 import { Server, FileBarChart, Database, Settings } from 'lucide-react';
 
@@ -31,7 +32,15 @@ const IndustrialIntegration = () => {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+          <div className="rounded-xl overflow-hidden shadow-lg">
+            <img 
+              src="https://cdn.adlinktech.com/webupd/en/upload/1200x630_23103016205408288.jpg" 
+              alt="Industrial System Integration" 
+              className="w-full h-full object-cover"
+            />
+          </div>
+          
           <div className="bg-white shadow-lg rounded-xl overflow-hidden">
             <div className="h-2 bg-gradient-to-r from-zseetech-teal-light to-zseetech-teal"></div>
             <div className="p-8">
@@ -66,44 +75,44 @@ const IndustrialIntegration = () => {
               </div>
             </div>
           </div>
-          
-          <div className="bg-white shadow-lg rounded-xl overflow-hidden">
-            <div className="h-2 bg-gradient-to-r from-zseetech-teal to-zseetech-teal-dark"></div>
-            <div className="p-8">
-              <h3 className="text-2xl font-semibold text-zseetech-teal-dark mb-4">PLC Connectivity Solutions</h3>
-              <p className="text-gray-600 mb-6">
-                Connect your Programmable Logic Controllers to our IoT ecosystem with native drivers and robust communication protocols for reliable industrial automation.
-              </p>
-              
-              <div className="space-y-4">
-                <div className="flex items-start">
-                  <div className="mt-1 w-2 h-2 rounded-full bg-zseetech-teal mr-2"></div>
-                  <span className="text-gray-700">Native drivers for Siemens, Allen Bradley, Mitsubishi, and more</span>
-                </div>
-                <div className="flex items-start">
-                  <div className="mt-1 w-2 h-2 rounded-full bg-zseetech-teal mr-2"></div>
-                  <span className="text-gray-700">Ethernet/IP, Profinet, and EtherCAT support</span>
-                </div>
-                <div className="flex items-start">
-                  <div className="mt-1 w-2 h-2 rounded-full bg-zseetech-teal mr-2"></div>
-                  <span className="text-gray-700">Bidirectional command and control capabilities</span>
-                </div>
-                <div className="flex items-start">
-                  <div className="mt-1 w-2 h-2 rounded-full bg-zseetech-teal mr-2"></div>
-                  <span className="text-gray-700">Edge-based logic processing for critical operations</span>
-                </div>
+        </div>
+        
+        <div className="bg-white shadow-lg rounded-xl overflow-hidden mb-16">
+          <div className="h-2 bg-gradient-to-r from-zseetech-teal to-zseetech-teal-dark"></div>
+          <div className="p-8">
+            <h3 className="text-2xl font-semibold text-zseetech-teal-dark mb-4">PLC Connectivity Solutions</h3>
+            <p className="text-gray-600 mb-6">
+              Connect your Programmable Logic Controllers to our IoT ecosystem with native drivers and robust communication protocols for reliable industrial automation.
+            </p>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div className="flex items-start">
+                <div className="mt-1 w-2 h-2 rounded-full bg-zseetech-teal mr-2"></div>
+                <span className="text-gray-700">Native drivers for Siemens, Allen Bradley, Mitsubishi, and more</span>
               </div>
-              
-              <div className="mt-8">
-                <Button className="w-full md:w-auto bg-gradient-to-r from-zseetech-teal to-zseetech-teal-dark text-white">
-                  Explore PLC Connectivity
-                </Button>
+              <div className="flex items-start">
+                <div className="mt-1 w-2 h-2 rounded-full bg-zseetech-teal mr-2"></div>
+                <span className="text-gray-700">Ethernet/IP, Profinet, and EtherCAT support</span>
               </div>
+              <div className="flex items-start">
+                <div className="mt-1 w-2 h-2 rounded-full bg-zseetech-teal mr-2"></div>
+                <span className="text-gray-700">Bidirectional command and control capabilities</span>
+              </div>
+              <div className="flex items-start">
+                <div className="mt-1 w-2 h-2 rounded-full bg-zseetech-teal mr-2"></div>
+                <span className="text-gray-700">Edge-based logic processing for critical operations</span>
+              </div>
+            </div>
+            
+            <div className="mt-8">
+              <Button className="w-full md:w-auto bg-gradient-to-r from-zseetech-teal to-zseetech-teal-dark text-white">
+                Explore PLC Connectivity
+              </Button>
             </div>
           </div>
         </div>
         
-        <div className="text-center mb-16">
+        <div className="text-center mb-8">
           <h3 className="text-2xl font-semibold text-zseetech-teal-dark mb-4">Protocol Support</h3>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-8">
             Our integration solutions support a comprehensive range of industrial communication protocols.
