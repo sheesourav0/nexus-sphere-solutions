@@ -1,5 +1,6 @@
+
 import { Button } from '@/components/ui/button';
-import { BarChart4, Database, Globe, Layers, Shield, Smartphone as SmartphoneIcon } from 'lucide-react';
+import { BarChart4, Database, Globe, Layers, Shield, SmartphoneIcon } from 'lucide-react';
 
 const SolutionItem = ({ icon, title, description }: { icon: React.ReactNode, title: string, description: string }) => {
   return (
@@ -66,12 +67,12 @@ const Solutions = () => {
           </div>
           
           <div className="relative">
-            {/* This would be a screenshot of the dashboard or platform */}
+            {/* IoT Platform Dashboard */}
             <div className="rounded-xl overflow-hidden shadow-2xl">
               <img 
-                src="/public/placeholder.svg" 
+                src="https://en.idei.club/uploads/posts/2023-06/1687645603_en-idei-club-p-iot-dashboard-dizain-pinterest-67.png" 
                 alt="White-Label IoT Platform" 
-                className="w-full"
+                className="w-full h-auto"
               />
             </div>
             
@@ -83,12 +84,12 @@ const Solutions = () => {
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div className="order-2 lg:order-1 relative">
-            {/* This would be a screenshot of the dashboard */}
+            {/* Dashboard visualization */}
             <div className="rounded-xl overflow-hidden shadow-2xl">
               <img 
-                src="/public/placeholder.svg" 
+                src="https://en.idei.club/uploads/posts/2023-06/1687645518_en-idei-club-p-iot-dashboard-dizain-pinterest-54.png" 
                 alt="Dynamic Dashboard Solutions" 
-                className="w-full"
+                className="w-full h-auto"
               />
             </div>
             

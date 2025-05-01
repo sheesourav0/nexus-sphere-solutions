@@ -1,5 +1,5 @@
 
-import { Building, Factory, Home, Hospital, Leaf, ShieldCheck, Truck } from 'lucide-react';
+import { Building, Droplet, Factory, Home, Hospital, Leaf, ShieldCheck, Truck, UtilityPole } from 'lucide-react';
 import { Card } from '@/components/ui/card';
 
 type IndustryCardProps = {
@@ -34,7 +34,7 @@ const Industries = () => {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
         <IndustryCard
           icon={<Factory size={32} />}
           title="Manufacturing & Industrial"
@@ -58,6 +58,14 @@ const Industries = () => {
         <IndustryCard
           icon={<Home size={32} />}
           title="Smart Home"
+        />
+        <IndustryCard
+          icon={<Droplet size={32} />}
+          title="Water Management (WTP, STP)"
+        />
+        <IndustryCard
+          icon={<UtilityPole size={32} />}
+          title="Utility Services & RO Plants"
         />
       </div>
       

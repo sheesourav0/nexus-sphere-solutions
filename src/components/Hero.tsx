@@ -29,10 +29,10 @@ const Hero = () => {
           
           <div className="w-full lg:w-1/2 mt-8 lg:mt-0 animate-fade-in">
             <div className="relative">
-              {/* Hero image featuring the ZSEE Tech logo */}
-              <div className="aspect-video bg-white rounded-xl backdrop-blur-sm border border-white/20 shadow-xl overflow-hidden flex items-center justify-center p-8">
+              {/* Hero image featuring the IoT Gateway */}
+              <div className="aspect-video bg-white rounded-xl backdrop-blur-sm border border-white/20 shadow-xl overflow-hidden flex items-center justify-center p-4">
                 <img 
-                  src="https://images.unsplash.com/photo-1580584126903-c17d41830450?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2000&q=80" 
+                  src="https://www.digi.com/getattachment/products/assets/hx15-gateway/digi-xbee-iot-solution-for-lorawan/digi-x-on-hx15-gateway-sparkfun-kit-b1.jpg" 
                   alt="IoT Industrial Solutions" 
                   className="w-full h-auto object-cover rounded-lg"
                 />
