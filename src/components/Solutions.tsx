@@ -1,6 +1,5 @@
-
 import { Button } from '@/components/ui/button';
-import { BarChart4, Database, Globe, Layers, Shield } from 'lucide-react';
+import { BarChart4, Database, Globe, Layers, Shield, Smartphone } from 'lucide-react';
 
 const SolutionItem = ({ icon, title, description }: { icon: React.ReactNode, title: string, description: string }) => {
   return (
