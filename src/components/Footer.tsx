@@ -1,12 +1,51 @@
 
+import React, { useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Facebook, Linkedin, Mail, Twitter } from 'lucide-react';
 
 const Footer = () => {
+  useEffect(() => {
+    // Create particles for the animated wave effect
+    const footerElement = document.getElementById('footer');
+    
+    if (footerElement) {
+      for (let i = 0; i < 30; i++) {
+        createParticle(footerElement);
+      }
+    }
+    
+    function createParticle(container: HTMLElement) {
+      const particle = document.createElement('span');
+      particle.className = 'particle';
+      
+      // Random size between 3px and 7px
+      const size = Math.random() * 4 + 3;
+      particle.style.width = `${size}px`;
+      particle.style.height = `${size}px`;
+      
+      // Random position
+      particle.style.left = `${Math.random() * 100}%`;
+      particle.style.top = `${Math.random() * 100}%`;
+      
+      // Random animation duration between 10s and 25s
+      const duration = Math.random() * 15 + 10;
+      particle.style.animation = `float ${duration}s linear infinite`;
+      
+      // Random delay to start animation
+      const delay = Math.random() * 5;
+      particle.style.animationDelay = `${delay}s`;
+      
+      container.appendChild(particle);
+    }
+  }, []);
+  
   return (
-    <footer className="bg-gray-900 text-white pt-16 pb-8">
-      <div className="container mx-auto px-4">
+    <footer id="footer" className="bg-gray-900 text-white pt-16 pb-8 relative wave-bg overflow-hidden">
+      {/* Animated Wave Background */}
+      <div className="wave-animation" />
+      
+      <div className="container mx-auto px-4 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           <div>
             <a href="#" className="flex items-center mb-6">
@@ -62,9 +101,13 @@ const Footer = () => {
             </p>
             <div className="flex space-x-2">
               <Input placeholder="Your email" className="bg-gray-800 border-gray-700 text-white" />
-              <Button className="bg-gradient-to-r from-zseetech-teal to-zseetech-teal-light text-white">
+              <Button className="bg-gradient-to-r from-zseetech-blue to-zseetech-teal text-white">
                 Subscribe
               </Button>
+            </div>
+            <div className="mt-6">
+              <p className="text-gray-400 text-sm">Service Tel: +852-91464856</p>
+              <p className="text-gray-400 text-sm">Service Email: info@zseetech.com</p>
             </div>
           </div>
         </div>

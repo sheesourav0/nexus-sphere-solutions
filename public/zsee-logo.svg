@@ -1,13 +1,20 @@
 
 <svg width="200" height="60" viewBox="0 0 200 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <!-- Blue Triangle -->
-  <path d="M20 40L40 10H0L20 40Z" fill="#0A2846"/>
+  <!-- Blue to Teal Gradient Square with Rounded Corners -->
+  <rect x="0" y="5" width="50" height="50" rx="10" fill="url(#blue-teal-gradient)"/>
   
-  <!-- Green checkmark parts -->
-  <path d="M45 30L55 10L65 30" fill="#41A949"/>
-  <path d="M65 30L75 10L85 30" fill="#31903A"/>
+  <!-- White "zsee" text -->
+  <text x="11" y="38" font-family="Arial" font-weight="bold" font-size="22" fill="white">zsee</text>
   
   <!-- Text -->
-  <text x="70" y="35" font-family="Arial" font-weight="bold" font-size="24" fill="#0A2846">ZSEE TECH</text>
-  <text x="70" y="50" font-family="Arial" font-size="12" fill="#333333">FUTURE IN EVERY BYTE</text>
+  <text x="60" y="35" font-family="Arial" font-weight="bold" font-size="24" fill="#0A2846">ZSEE TECH</text>
+  <text x="60" y="50" font-family="Arial" font-size="12" fill="#333333">FUTURE IN EVERY BYTE</text>
+  
+  <!-- Define the gradient -->
+  <defs>
+    <linearGradient id="blue-teal-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2673F0"/>
+      <stop offset="100%" style="stop-color:#19C6B3"/>
+    </linearGradient>
+  </defs>
 </svg>

@@ -29,17 +29,17 @@ const Hero = () => {
           
           <div className="w-full lg:w-1/2 mt-8 lg:mt-0 animate-fade-in">
             <div className="relative">
-              {/* Hero image featuring the new ZSEE Tech logo */}
+              {/* Hero image featuring the ZSEE Tech logo */}
               <div className="aspect-video bg-white rounded-xl backdrop-blur-sm border border-white/20 shadow-xl overflow-hidden flex items-center justify-center p-8">
                 <img 
-                  src="/public/lovable-uploads/c772d54c-5cdf-48ee-b842-b056c554f1af.png" 
-                  alt="ZSEE Tech Logo" 
-                  className="w-4/5 h-auto object-contain"
+                  src="https://images.unsplash.com/photo-1580584126903-c17d41830450?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2000&q=80" 
+                  alt="IoT Industrial Solutions" 
+                  className="w-full h-auto object-cover rounded-lg"
                 />
               </div>
               
               {/* Floating elements for visual interest */}
-              <div className="absolute -top-6 -right-6 w-24 h-24 rounded-full bg-zseetech-green-light/20 backdrop-blur-md"></div>
+              <div className="absolute -top-6 -right-6 w-24 h-24 rounded-full bg-zseetech-teal/20 backdrop-blur-md"></div>
               <div className="absolute -bottom-8 -left-8 w-32 h-32 rounded-full bg-zseetech-blue/20 backdrop-blur-md"></div>
             </div>
           </div>

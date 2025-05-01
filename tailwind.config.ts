@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -63,14 +62,14 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				// Custom colors for ZSEE Tech based on the new logo
+				// Updated colors for ZSEE Tech based on the new logo
 				zseetech: {
-					'blue': '#0A2846',
-					'blue-dark': '#072036',
-					'blue-light': '#1A3856',
-					'green': '#41A949',
-					'green-dark': '#31903A',
-					'green-light': '#51B959',
+					'blue': '#2673F0',
+					'blue-dark': '#1E5AC0',
+					'blue-light': '#4B8FF5',
+					'teal': '#19C6B3',
+					'teal-dark': '#14A798',
+					'teal-light': '#3AD6C5',
 					'gray': '#333333',
 					'gray-light': '#666666',
 					'white': '#FFFFFF',
@@ -114,9 +113,10 @@ export default {
 				'slide-in-right': 'slide-in-right 0.5s ease-out'
 			},
 			backgroundImage: {
-				'hero-pattern': 'linear-gradient(135deg, #51B959 0%, #41A949 100%)',
-				'service-gradient': 'linear-gradient(135deg, rgba(81,185,89,0.1) 0%, rgba(65,169,73,0.1) 100%)',
-				'mesh-pattern': 'url("/public/mesh-bg.svg")'
+				'hero-pattern': 'linear-gradient(135deg, #2673F0 0%, #19C6B3 100%)',
+				'service-gradient': 'linear-gradient(135deg, rgba(38,115,240,0.1) 0%, rgba(25,198,179,0.1) 100%)',
+				'mesh-pattern': 'url("/public/mesh-bg.svg")',
+				'wave-texture': 'url("/public/lovable-uploads/4b9a4665-a39a-4e3c-b9d0-d9987c2b57d5.png")'
 			}
 		}
 	},

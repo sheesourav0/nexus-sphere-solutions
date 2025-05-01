@@ -10,7 +10,7 @@ type IndustryCardProps = {
 const IndustryCard = ({ icon, title }: IndustryCardProps) => {
   return (
     <Card className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow flex flex-col items-center text-center h-full">
-      <div className="w-16 h-16 bg-gradient-to-r from-zseetech-teal-light to-zseetech-teal rounded-full flex items-center justify-center text-white mb-4">
+      <div className="w-16 h-16 bg-gradient-to-r from-zseetech-blue to-zseetech-teal rounded-full flex items-center justify-center text-white mb-4">
         {icon}
       </div>
       <h3 className="text-lg font-semibold text-zseetech-blue-dark">{title}</h3>
@@ -23,7 +23,7 @@ const Industries = () => {
     <section id="industries" className="section-container bg-gradient-to-br from-white to-zseetech-blue/5">
       <div className="text-center mb-12">
         <div className="flex justify-center mb-4">
-          <div className="bg-gradient-to-r from-zseetech-blue to-zseetech-green p-3 rounded-full">
+          <div className="bg-gradient-to-r from-zseetech-blue to-zseetech-teal p-3 rounded-full">
             <Factory className="w-10 h-10 text-white" />
           </div>
         </div>

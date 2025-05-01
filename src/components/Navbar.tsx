@@ -22,16 +22,16 @@ const Navbar = () => {
           
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">
-            <a href="#home" className="text-zseetech-blue hover:text-zseetech-green transition-colors">Home</a>
-            <a href="#services" className="text-zseetech-blue hover:text-zseetech-green transition-colors">Services</a>
-            <a href="#solutions" className="text-zseetech-blue hover:text-zseetech-green transition-colors">Solutions</a>
-            <a href="#industries" className="text-zseetech-blue hover:text-zseetech-green transition-colors">Industries</a>
-            <a href="#about" className="text-zseetech-blue hover:text-zseetech-green transition-colors">About Us</a>
-            <a href="#contact" className="text-zseetech-blue hover:text-zseetech-green transition-colors">Contact</a>
+            <a href="#home" className="text-zseetech-blue hover:text-zseetech-teal transition-colors">Home</a>
+            <a href="#services" className="text-zseetech-blue hover:text-zseetech-teal transition-colors">Services</a>
+            <a href="#solutions" className="text-zseetech-blue hover:text-zseetech-teal transition-colors">Solutions</a>
+            <a href="#industries" className="text-zseetech-blue hover:text-zseetech-teal transition-colors">Industries</a>
+            <a href="#about" className="text-zseetech-blue hover:text-zseetech-teal transition-colors">About Us</a>
+            <a href="#contact" className="text-zseetech-blue hover:text-zseetech-teal transition-colors">Contact</a>
           </nav>
           
           <div className="hidden md:block">
-            <Button className="bg-gradient-to-r from-zseetech-green to-zseetech-green-light text-white">Contact Us</Button>
+            <Button className="bg-gradient-to-r from-zseetech-blue to-zseetech-teal text-white">Contact Us</Button>
           </div>
           
           {/* Mobile menu button */}
@@ -57,7 +57,7 @@ const Navbar = () => {
             <a href="#industries" className="block px-3 py-2 text-zseetech-blue hover:bg-muted rounded-md" onClick={toggleMenu}>Industries</a>
             <a href="#about" className="block px-3 py-2 text-zseetech-blue hover:bg-muted rounded-md" onClick={toggleMenu}>About Us</a>
             <a href="#contact" className="block px-3 py-2 text-zseetech-blue hover:bg-muted rounded-md" onClick={toggleMenu}>Contact</a>
-            <Button className="w-full bg-gradient-to-r from-zseetech-green to-zseetech-green-light text-white">Contact Us</Button>
+            <Button className="w-full bg-gradient-to-r from-zseetech-blue to-zseetech-teal text-white">Contact Us</Button>
           </div>
         </div>
       )}
