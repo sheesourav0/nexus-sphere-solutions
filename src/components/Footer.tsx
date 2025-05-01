@@ -48,8 +48,12 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           <div>
             <a href="#" className="flex items-center mb-6">
-              {/* Replace SVG with image and adjust brightness filter */}
-              <img src="/zsee-logo.png" alt="ZSEE Tech" className="h-12 filter brightness-150" />
+              {/* Use Google Drive image URL directly */}
+              <img 
+                src="https://drive.google.com/uc?export=view&id=1ff89Z-SAjTYiHLD9hKq2GaqIajqcCwmA" 
+                alt="ZSEE Tech" 
+                className="h-12 filter brightness-150" 
+              />
             </a>
             <p className="text-gray-400 mb-6">
               Transforming tomorrow through connected innovation. Leading provider of IoT solutions for businesses worldwide.

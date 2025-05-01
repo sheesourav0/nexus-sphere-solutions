@@ -56,8 +56,12 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16 md:h-20">
           <div className="flex-shrink-0">
             <a href="#" className="flex items-center">
-              {/* Replace SVG with image */}
-              <img src="/zsee-logo.png" alt="ZSEE Tech" className="h-12" />
+              {/* Use Google Drive image URL directly */}
+              <img 
+                src="https://drive.google.com/uc?export=view&id=1ff89Z-SAjTYiHLD9hKq2GaqIajqcCwmA" 
+                alt="ZSEE Tech" 
+                className="h-12" 
+              />
             </a>
           </div>
           
