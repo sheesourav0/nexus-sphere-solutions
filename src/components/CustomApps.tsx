@@ -1,6 +1,6 @@
 
 import { Button } from '@/components/ui/button';
-import { Layout, Smartphone, Code, FileText, Cube } from 'lucide-react';
+import { Layout, Smartphone, Code, FileText, Package } from 'lucide-react';
 
 const CustomApps = () => {
   return (
@@ -73,7 +73,7 @@ const CustomApps = () => {
             <div className="p-8">
               <h3 className="text-2xl font-semibold text-zseetech-teal-dark mb-6">
                 <div className="flex items-center">
-                  <Cube className="w-7 h-7 text-zseetech-teal mr-2" />
+                  <Package className="w-7 h-7 text-zseetech-teal mr-2" />
                   <span>3D Printing Services</span>
                 </div>
               </h3>

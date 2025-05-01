@@ -1,5 +1,5 @@
 
-import { Cube, Box } from 'lucide-react';
+import { Box, Package } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const ThreeDPrinting = () => {
@@ -9,7 +9,7 @@ const ThreeDPrinting = () => {
         <div className="text-center mb-16">
           <div className="flex justify-center mb-4">
             <div className="bg-gradient-to-r from-zseetech-teal-light to-zseetech-teal p-4 rounded-full">
-              <Cube className="w-12 h-12 text-white" />
+              <Package className="w-12 h-12 text-white" />
             </div>
           </div>
           <h2 className="section-title">Advanced 3D Printing Services</h2>
