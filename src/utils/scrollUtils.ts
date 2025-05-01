@@ -20,5 +20,10 @@ export const scrollToSection = (elementId: string): void => {
       top: offsetPosition,
       behavior: "smooth"
     });
+    
+    // Update URL hash without scrolling (to maintain state)
+    history.pushState(null, "", `#${elementId}`);
+  } else {
+    console.warn(`Element with ID "${elementId}" not found.`);
   }
 };
