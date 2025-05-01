@@ -1,13 +1,54 @@
 
 import { useState } from 'react';
-import { Menu, X } from 'lucide-react';
+import { ChevronDown, Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+
+// Define dropdown menu types
+type DropdownItem = {
+  label: string;
+  href: string;
+};
+
+type DropdownMenuData = {
+  [key: string]: DropdownItem[];
+};
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
+  };
+  
+  // Dropdown menu data
+  const dropdownMenus: DropdownMenuData = {
+    services: [
+      { label: 'IoT Connectivity', href: '#iot-connectivity' },
+      { label: 'Remote Monitoring', href: '#remote-monitoring' },
+      { label: 'Custom IoT Development', href: '#custom-iot' },
+      { label: '3D Printing', href: '#3d-printing' },
+    ],
+    solutions: [
+      { label: 'White-Label IoT Platform', href: '#white-label' },
+      { label: 'Dynamic Dashboard Solutions', href: '#dashboards' },
+      { label: 'Custom Applications', href: '#custom-apps' },
+      { label: 'Report Generation', href: '#reports' },
+    ],
+    industries: [
+      { label: 'Manufacturing', href: '#manufacturing' },
+      { label: 'Healthcare', href: '#healthcare' },
+      { label: 'Smart City', href: '#smart-city' },
+      { label: 'Agriculture', href: '#agriculture' },
+    ],
+  };
+  
+  const handleMouseEnter = (section: string) => {
+    setActiveDropdown(section);
+  };
+  
+  const handleMouseLeave = () => {
+    setActiveDropdown(null);
   };
 
   return (
@@ -23,9 +64,79 @@ const Navbar = () => {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">
             <a href="#home" className="text-zseetech-blue hover:text-zseetech-teal transition-colors">Home</a>
-            <a href="#services" className="text-zseetech-blue hover:text-zseetech-teal transition-colors">Services</a>
-            <a href="#solutions" className="text-zseetech-blue hover:text-zseetech-teal transition-colors">Solutions</a>
-            <a href="#industries" className="text-zseetech-blue hover:text-zseetech-teal transition-colors">Industries</a>
+            
+            {/* Services Dropdown */}
+            <div 
+              className="relative" 
+              onMouseEnter={() => handleMouseEnter('services')}
+              onMouseLeave={handleMouseLeave}
+            >
+              <a href="#services" className="text-zseetech-blue hover:text-zseetech-teal transition-colors flex items-center">
+                Services <ChevronDown size={16} className="ml-1" />
+              </a>
+              {activeDropdown === 'services' && (
+                <div className="absolute top-full left-0 mt-1 w-64 bg-white rounded-md shadow-lg border border-gray-100 py-2 z-50">
+                  {dropdownMenus.services.map((item) => (
+                    <a 
+                      key={item.href} 
+                      href={item.href} 
+                      className="block px-4 py-2 text-sm text-zseetech-blue hover:bg-zseetech-teal/10 hover:text-zseetech-teal"
+                    >
+                      {item.label}
+                    </a>
+                  ))}
+                </div>
+              )}
+            </div>
+            
+            {/* Solutions Dropdown */}
+            <div 
+              className="relative" 
+              onMouseEnter={() => handleMouseEnter('solutions')}
+              onMouseLeave={handleMouseLeave}
+            >
+              <a href="#solutions" className="text-zseetech-blue hover:text-zseetech-teal transition-colors flex items-center">
+                Solutions <ChevronDown size={16} className="ml-1" />
+              </a>
+              {activeDropdown === 'solutions' && (
+                <div className="absolute top-full left-0 mt-1 w-64 bg-white rounded-md shadow-lg border border-gray-100 py-2 z-50">
+                  {dropdownMenus.solutions.map((item) => (
+                    <a 
+                      key={item.href} 
+                      href={item.href} 
+                      className="block px-4 py-2 text-sm text-zseetech-blue hover:bg-zseetech-teal/10 hover:text-zseetech-teal"
+                    >
+                      {item.label}
+                    </a>
+                  ))}
+                </div>
+              )}
+            </div>
+            
+            {/* Industries Dropdown */}
+            <div 
+              className="relative" 
+              onMouseEnter={() => handleMouseEnter('industries')}
+              onMouseLeave={handleMouseLeave}
+            >
+              <a href="#industries" className="text-zseetech-blue hover:text-zseetech-teal transition-colors flex items-center">
+                Industries <ChevronDown size={16} className="ml-1" />
+              </a>
+              {activeDropdown === 'industries' && (
+                <div className="absolute top-full left-0 mt-1 w-64 bg-white rounded-md shadow-lg border border-gray-100 py-2 z-50">
+                  {dropdownMenus.industries.map((item) => (
+                    <a 
+                      key={item.href} 
+                      href={item.href} 
+                      className="block px-4 py-2 text-sm text-zseetech-blue hover:bg-zseetech-teal/10 hover:text-zseetech-teal"
+                    >
+                      {item.label}
+                    </a>
+                  ))}
+                </div>
+              )}
+            </div>
+            
             <a href="#about" className="text-zseetech-blue hover:text-zseetech-teal transition-colors">About Us</a>
             <a href="#contact" className="text-zseetech-blue hover:text-zseetech-teal transition-colors">Contact</a>
           </nav>
