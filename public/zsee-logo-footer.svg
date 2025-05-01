@@ -8,13 +8,13 @@
     zsee
   </text>
   
-  <!-- Text "ZSEE TECH" with shadow effect -->
-  <text x="94" y="40" font-family="Montserrat, Arial, sans-serif" font-size="28" font-weight="800" fill="black" style="filter: drop-shadow(2px 2px 1px rgba(0,0,0,0.3));">
+  <!-- Text "ZSEE TECH" with shadow effect in white -->
+  <text x="94" y="40" font-family="Montserrat, Arial, sans-serif" font-size="28" font-weight="800" fill="white" style="filter: drop-shadow(2px 2px 1px rgba(0,0,0,0.5));">
     ZSEE TECH
   </text>
   
-  <!-- Slogan text with Futura font -->
-  <text x="95" y="65" font-family="Futura, Arial, sans-serif" font-size="14" letter-spacing="1" fill="black">
+  <!-- Slogan text with Futura font in white -->
+  <text x="95" y="65" font-family="Futura, Arial, sans-serif" font-size="14" letter-spacing="1" fill="white">
     FUTURE IN EVERY BYTE
   </text>
   
