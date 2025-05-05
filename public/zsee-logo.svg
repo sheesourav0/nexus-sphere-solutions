@@ -1,28 +1,42 @@
 
 <svg width="300" height="80" viewBox="0 0 300 80" xmlns="http://www.w3.org/2000/svg">
-  <!-- Background gradient rectangle with rounded corners -->
-  <rect width="80" height="80" rx="20" fill="url(#gradient)" />
+  <!-- ZSEE TECH Logo -->
+  <g transform="translate(0, 5)">
+    <!-- Blue Triangle -->
+    <path d="M75,50 L30,50 L75,5 Z" fill="url(#blue-gradient)" />
+    
+    <!-- Green Small Square -->
+    <path d="M85,10 L110,35 L85,35 Z" fill="url(#green-gradient)" />
+    
+    <!-- Teal Rectangle -->
+    <path d="M115,10 L150,45 L115,45 Z" fill="url(#teal-gradient)" />
+    
+    <!-- ZSEE TECH Text -->
+    <text x="75" y="70" font-family="Arial, sans-serif" font-size="28" font-weight="800" fill="#091e42">
+      ZSEE TECH
+    </text>
+    
+    <!-- Technology Text -->
+    <text x="75" y="90" font-family="Arial, sans-serif" font-size="14" letter-spacing="4" fill="#091e42">
+      TECHNOLOGY
+    </text>
+  </g>
   
-  <!-- Text "zsee" in the blue square -->
-  <text x="15" y="50" font-family="Montserrat, Arial, sans-serif" font-size="24" font-weight="800" fill="white">
-    zsee
-  </text>
-  
-  <!-- Text "ZSEE TECH" with shadow effect -->
-  <text x="94" y="40" font-family="Montserrat, Arial, sans-serif" font-size="28" font-weight="800" fill="black" style="filter: drop-shadow(2px 2px 1px rgba(0,0,0,0.3));">
-    ZSEE TECH
-  </text>
-  
-  <!-- Slogan text with Futura font -->
-  <text x="95" y="65" font-family="Futura, Arial, sans-serif" font-size="14" letter-spacing="1" fill="black">
-    FUTURE IN EVERY BYTE
-  </text>
-  
-  <!-- Define the gradient -->
+  <!-- Define gradients -->
   <defs>
-    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#0066FF" />
-      <stop offset="100%" style="stop-color:#00CCAA" />
+    <linearGradient id="blue-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#001A57" />
+      <stop offset="100%" style="stop-color:#0057A9" />
+    </linearGradient>
+    
+    <linearGradient id="green-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#9CCB3B" />
+      <stop offset="100%" style="stop-color:#5BA641" />
+    </linearGradient>
+    
+    <linearGradient id="teal-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#5BA641" />
+      <stop offset="100%" style="stop-color:#008C7A" />
     </linearGradient>
   </defs>
 </svg>
