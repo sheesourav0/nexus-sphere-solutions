@@ -54,7 +54,11 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           <div>
             <a href="#home" onClick={(e) => handleLinkClick(e, 'home')} className="flex items-center mb-6">
-              <img src="/zsee-logo.png" alt="ZSEE Tech" className="h-16 w-auto" />
+              <img 
+                src="/lovable-uploads/430c16c1-f6cd-4faf-81ca-044b293bacd9.png" 
+                alt="ZSEE Tech" 
+                className="h-16 w-auto" 
+              />
             </a>
             <p className="text-gray-400 mb-6">
               Transforming tomorrow through connected innovation. Leading provider of IoT solutions for businesses worldwide.
