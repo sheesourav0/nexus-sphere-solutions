@@ -1,4 +1,3 @@
-
 import React, { useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -55,7 +54,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           <div>
             <a href="#home" onClick={(e) => handleLinkClick(e, 'home')} className="flex items-center mb-6">
-              <img src="/zsee-logo-footer.svg" alt="ZSEE Tech" className="h-16 w-auto" />
+              <img src="/zsee-logo.png" alt="ZSEE Tech" className="h-16 w-auto" />
             </a>
             <p className="text-gray-400 mb-6">
               Transforming tomorrow through connected innovation. Leading provider of IoT solutions for businesses worldwide.

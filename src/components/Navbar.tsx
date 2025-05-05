@@ -88,7 +88,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16 md:h-20">
           <div className="flex-shrink-0">
             <a href="#" onClick={(e) => handleNavClick(e, 'home')} className="flex items-center">
-              <img src="/zsee-logo.svg" alt="ZSEE Tech" className="h-10 md:h-12 w-auto" />
+              <img src="/zsee-logo.png" alt="ZSEE Tech" className="h-10 md:h-12 w-auto" />
             </a>
           </div>
           
