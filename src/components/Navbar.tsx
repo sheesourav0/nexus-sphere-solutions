@@ -88,7 +88,7 @@ const Navbar = () => {
           <div className="flex-shrink-0">
             <a href="#" onClick={(e) => handleNavClick(e, 'home')} className="flex items-center">
               <img 
-                src="/lovable-uploads/430c16c1-f6cd-4faf-81ca-044b293bacd9.png" 
+                src="/lovable-uploads/2a7d60e2-7852-4c14-81b2-19c090e9f7e8.png" 
                 alt="ZSEE Tech" 
                 className="h-10 md:h-12 w-auto" 
               />
