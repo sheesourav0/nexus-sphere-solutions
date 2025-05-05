@@ -90,7 +90,7 @@ const Navbar = () => {
               <img 
                 src="/lovable-uploads/2a7d60e2-7852-4c14-81b2-19c090e9f7e8.png" 
                 alt="ZSEE Tech" 
-                className="h-10 md:h-12 w-auto" 
+                className="h-10 md:h-12 w-auto rounded-lg" 
               />
             </a>
           </div>
