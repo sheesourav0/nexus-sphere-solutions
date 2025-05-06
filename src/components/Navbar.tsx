@@ -119,7 +119,7 @@ const Navbar = () => {
   };
 
   return (
-    <header id="navbar" className={`fixed w-full bg-gray-900 text-white backdrop-blur-md z-50 shadow-sm transition-all duration-300 wave-bg overflow-hidden ${isScrolled ? 'shadow-md' : ''}`}>
+    <header id="navbar" className={`fixed w-full bg-gray-900 text-white backdrop-blur-md z-50 shadow-sm transition-all duration-300 wave-bg overflow-hidden ${isScrolled ? 'shadow-md' : ''} top-0 left-0 right-0`}>
       {/* Animated Wave Background - Subtle version */}
       <div className="wave-animation opacity-10" />
       
