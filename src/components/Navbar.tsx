@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { ChevronDown, Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -34,48 +33,9 @@ const Navbar = () => {
     };
     
     window.addEventListener('scroll', handleScroll);
-    // Initial check to set correct state on page load
-    handleScroll();
-    
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, []);
-
-  // Particle animation effect
-  useEffect(() => {
-    // Create particles for the animated wave effect
-    const navbarElement = document.getElementById('navbar');
-    
-    if (navbarElement) {
-      for (let i = 0; i < 15; i++) {
-        createParticle(navbarElement);
-      }
-    }
-    
-    function createParticle(container: HTMLElement) {
-      const particle = document.createElement('span');
-      particle.className = 'particle';
-      
-      // Random size between 2px and 5px (smaller than footer)
-      const size = Math.random() * 3 + 2;
-      particle.style.width = `${size}px`;
-      particle.style.height = `${size}px`;
-      
-      // Random position
-      particle.style.left = `${Math.random() * 100}%`;
-      particle.style.top = `${Math.random() * 100}%`;
-      
-      // Random animation duration between 10s and 20s
-      const duration = Math.random() * 10 + 10;
-      particle.style.animation = `float ${duration}s linear infinite`;
-      
-      // Random delay to start animation
-      const delay = Math.random() * 5;
-      particle.style.animationDelay = `${delay}s`;
-      
-      container.appendChild(particle);
-    }
   }, []);
   
   // Dropdown menu data
@@ -122,11 +82,8 @@ const Navbar = () => {
   };
 
   return (
-    <header id="navbar" className={`fixed w-full bg-gray-900 text-white backdrop-blur-md z-50 shadow-sm transition-all duration-300 wave-bg overflow-hidden ${isScrolled ? 'bg-opacity-95 shadow-md' : 'bg-opacity-100'} top-0 left-0 right-0`}>
-      {/* Animated Wave Background - Subtle version */}
-      <div className="wave-animation opacity-10" />
-      
-      <div className="container mx-auto px-4 md:px-6 relative z-10">
+    <header className={`fixed w-full bg-white/80 backdrop-blur-md z-50 shadow-sm transition-all duration-300 ${isScrolled ? 'shadow-md' : ''}`}>
+      <div className="container mx-auto px-4 md:px-6">
         <div className="flex items-center justify-between h-16 md:h-20">
           <div className="flex-shrink-0">
             <a href="#" onClick={(e) => handleNavClick(e, 'home')} className="flex items-center">
@@ -140,7 +97,7 @@ const Navbar = () => {
           
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">
-            <a href="#home" onClick={(e) => handleNavClick(e, 'home')} className="text-white hover:text-zseetech-teal transition-colors">Home</a>
+            <a href="#home" onClick={(e) => handleNavClick(e, 'home')} className="text-zseetech-blue hover:text-zseetech-teal transition-colors">Home</a>
             
             {/* Services Dropdown */}
             <div 
@@ -151,19 +108,19 @@ const Navbar = () => {
               <a 
                 href="#services" 
                 onClick={(e) => handleNavClick(e, 'services')} 
-                className="text-white hover:text-zseetech-teal transition-colors flex items-center"
+                className="text-zseetech-blue hover:text-zseetech-teal transition-colors flex items-center"
               >
                 Services <ChevronDown size={16} className={`ml-1 transition-transform ${activeDropdown === 'services' ? 'rotate-180' : ''}`} />
               </a>
               <div 
-                className={`absolute top-full left-0 mt-1 w-64 bg-gray-800 rounded-md shadow-lg border border-gray-700 py-2 z-50 transition-all duration-200 origin-top ${activeDropdown === 'services' ? 'opacity-100 scale-100' : 'opacity-0 scale-95 pointer-events-none'}`}
+                className={`absolute top-full left-0 mt-1 w-64 bg-white rounded-md shadow-lg border border-gray-100 py-2 z-50 transition-all duration-200 origin-top ${activeDropdown === 'services' ? 'opacity-100 scale-100' : 'opacity-0 scale-95 pointer-events-none'}`}
               >
                 {dropdownMenus.services.map((item) => (
                   <a 
                     key={item.href} 
                     href={`#${item.href}`}
                     onClick={(e) => handleDropdownClick(e, item.href)} 
-                    className="block px-4 py-2 text-sm text-gray-300 hover:bg-zseetech-teal/20 hover:text-zseetech-teal"
+                    className="block px-4 py-2 text-sm text-zseetech-blue hover:bg-zseetech-teal/10 hover:text-zseetech-teal"
                   >
                     {item.label}
                   </a>
@@ -180,19 +137,19 @@ const Navbar = () => {
               <a 
                 href="#solutions" 
                 onClick={(e) => handleNavClick(e, 'solutions')} 
-                className="text-white hover:text-zseetech-teal transition-colors flex items-center"
+                className="text-zseetech-blue hover:text-zseetech-teal transition-colors flex items-center"
               >
                 Solutions <ChevronDown size={16} className={`ml-1 transition-transform ${activeDropdown === 'solutions' ? 'rotate-180' : ''}`} />
               </a>
               <div 
-                className={`absolute top-full left-0 mt-1 w-64 bg-gray-800 rounded-md shadow-lg border border-gray-700 py-2 z-50 transition-all duration-200 origin-top ${activeDropdown === 'solutions' ? 'opacity-100 scale-100' : 'opacity-0 scale-95 pointer-events-none'}`}
+                className={`absolute top-full left-0 mt-1 w-64 bg-white rounded-md shadow-lg border border-gray-100 py-2 z-50 transition-all duration-200 origin-top ${activeDropdown === 'solutions' ? 'opacity-100 scale-100' : 'opacity-0 scale-95 pointer-events-none'}`}
               >
                 {dropdownMenus.solutions.map((item) => (
                   <a 
                     key={item.href} 
                     href={`#${item.href}`}
                     onClick={(e) => handleDropdownClick(e, item.href)} 
-                    className="block px-4 py-2 text-sm text-gray-300 hover:bg-zseetech-teal/20 hover:text-zseetech-teal"
+                    className="block px-4 py-2 text-sm text-zseetech-blue hover:bg-zseetech-teal/10 hover:text-zseetech-teal"
                   >
                     {item.label}
                   </a>
@@ -209,19 +166,19 @@ const Navbar = () => {
               <a 
                 href="#industries" 
                 onClick={(e) => handleNavClick(e, 'industries')} 
-                className="text-white hover:text-zseetech-teal transition-colors flex items-center"
+                className="text-zseetech-blue hover:text-zseetech-teal transition-colors flex items-center"
               >
                 Industries <ChevronDown size={16} className={`ml-1 transition-transform ${activeDropdown === 'industries' ? 'rotate-180' : ''}`} />
               </a>
               <div 
-                className={`absolute top-full left-0 mt-1 w-64 bg-gray-800 rounded-md shadow-lg border border-gray-700 py-2 z-50 transition-all duration-200 origin-top ${activeDropdown === 'industries' ? 'opacity-100 scale-100' : 'opacity-0 scale-95 pointer-events-none'}`}
+                className={`absolute top-full left-0 mt-1 w-64 bg-white rounded-md shadow-lg border border-gray-100 py-2 z-50 transition-all duration-200 origin-top ${activeDropdown === 'industries' ? 'opacity-100 scale-100' : 'opacity-0 scale-95 pointer-events-none'}`}
               >
                 {dropdownMenus.industries.map((item) => (
                   <a 
                     key={item.href} 
                     href={`#${item.href}`}
                     onClick={(e) => handleDropdownClick(e, item.href)} 
-                    className="block px-4 py-2 text-sm text-gray-300 hover:bg-zseetech-teal/20 hover:text-zseetech-teal"
+                    className="block px-4 py-2 text-sm text-zseetech-blue hover:bg-zseetech-teal/10 hover:text-zseetech-teal"
                   >
                     {item.label}
                   </a>
@@ -229,8 +186,8 @@ const Navbar = () => {
               </div>
             </div>
             
-            <a href="#about" onClick={(e) => handleNavClick(e, 'about')} className="text-white hover:text-zseetech-teal transition-colors">About Us</a>
-            <a href="#contact" onClick={(e) => handleNavClick(e, 'contact')} className="text-white hover:text-zseetech-teal transition-colors">Contact</a>
+            <a href="#about" onClick={(e) => handleNavClick(e, 'about')} className="text-zseetech-blue hover:text-zseetech-teal transition-colors">About Us</a>
+            <a href="#contact" onClick={(e) => handleNavClick(e, 'contact')} className="text-zseetech-blue hover:text-zseetech-teal transition-colors">Contact</a>
           </nav>
           
           <div className="hidden md:block">
@@ -246,7 +203,7 @@ const Navbar = () => {
           <div className="md:hidden">
             <button 
               type="button" 
-              className="text-white"
+              className="text-zseetech-blue"
               onClick={toggleMenu}
               aria-label="Toggle menu"
             >
@@ -257,20 +214,20 @@ const Navbar = () => {
       </div>
       
       {/* Mobile Navigation */}
-      <div className={`md:hidden bg-gray-800 shadow-md transition-all duration-300 ${isMenuOpen ? 'max-h-[80vh] overflow-y-auto' : 'max-h-0 overflow-hidden'}`}>
+      <div className={`md:hidden bg-white shadow-md transition-all duration-300 ${isMenuOpen ? 'max-h-[80vh] overflow-y-auto' : 'max-h-0 overflow-hidden'}`}>
         <div className="px-4 py-4 space-y-3">
-          <a href="#home" className="block px-3 py-2 text-white hover:bg-gray-700 rounded-md" onClick={(e) => {e.preventDefault(); scrollToSection('home'); toggleMenu();}}>Home</a>
+          <a href="#home" className="block px-3 py-2 text-zseetech-blue hover:bg-muted rounded-md" onClick={(e) => {e.preventDefault(); scrollToSection('home'); toggleMenu();}}>Home</a>
           
           {/* Mobile Services Menu */}
           <div className="space-y-1">
-            <a href="#services" className="block px-3 py-2 text-white hover:bg-gray-700 rounded-md" onClick={(e) => {e.preventDefault(); scrollToSection('services'); toggleMenu();}}>Services</a>
-            <div className="ml-4 pl-2 border-l-2 border-gray-600 space-y-1">
+            <a href="#services" className="block px-3 py-2 text-zseetech-blue hover:bg-muted rounded-md" onClick={(e) => {e.preventDefault(); scrollToSection('services'); toggleMenu();}}>Services</a>
+            <div className="ml-4 pl-2 border-l-2 border-gray-200 space-y-1">
               {dropdownMenus.services.map((item) => (
                 <a 
                   key={item.href} 
                   href={`#${item.href}`}
                   onClick={(e) => handleDropdownClick(e, item.href)} 
-                  className="block px-3 py-1 text-sm text-gray-300 hover:bg-gray-700 rounded-md"
+                  className="block px-3 py-1 text-sm text-zseetech-blue hover:bg-muted rounded-md"
                 >
                   {item.label}
                 </a>
@@ -280,14 +237,14 @@ const Navbar = () => {
           
           {/* Mobile Solutions Menu */}
           <div className="space-y-1">
-            <a href="#solutions" className="block px-3 py-2 text-white hover:bg-gray-700 rounded-md" onClick={(e) => {e.preventDefault(); scrollToSection('solutions'); toggleMenu();}}>Solutions</a>
-            <div className="ml-4 pl-2 border-l-2 border-gray-600 space-y-1">
+            <a href="#solutions" className="block px-3 py-2 text-zseetech-blue hover:bg-muted rounded-md" onClick={(e) => {e.preventDefault(); scrollToSection('solutions'); toggleMenu();}}>Solutions</a>
+            <div className="ml-4 pl-2 border-l-2 border-gray-200 space-y-1">
               {dropdownMenus.solutions.map((item) => (
                 <a 
                   key={item.href} 
                   href={`#${item.href}`}
                   onClick={(e) => handleDropdownClick(e, item.href)} 
-                  className="block px-3 py-1 text-sm text-gray-300 hover:bg-gray-700 rounded-md"
+                  className="block px-3 py-1 text-sm text-zseetech-blue hover:bg-muted rounded-md"
                 >
                   {item.label}
                 </a>
@@ -297,14 +254,14 @@ const Navbar = () => {
           
           {/* Mobile Industries Menu */}
           <div className="space-y-1">
-            <a href="#industries" className="block px-3 py-2 text-white hover:bg-gray-700 rounded-md" onClick={(e) => {e.preventDefault(); scrollToSection('industries'); toggleMenu();}}>Industries</a>
-            <div className="ml-4 pl-2 border-l-2 border-gray-600 space-y-1">
+            <a href="#industries" className="block px-3 py-2 text-zseetech-blue hover:bg-muted rounded-md" onClick={(e) => {e.preventDefault(); scrollToSection('industries'); toggleMenu();}}>Industries</a>
+            <div className="ml-4 pl-2 border-l-2 border-gray-200 space-y-1">
               {dropdownMenus.industries.map((item) => (
                 <a 
                   key={item.href} 
                   href={`#${item.href}`}
                   onClick={(e) => handleDropdownClick(e, item.href)} 
-                  className="block px-3 py-1 text-sm text-gray-300 hover:bg-gray-700 rounded-md"
+                  className="block px-3 py-1 text-sm text-zseetech-blue hover:bg-muted rounded-md"
                 >
                   {item.label}
                 </a>
@@ -312,8 +269,8 @@ const Navbar = () => {
             </div>
           </div>
           
-          <a href="#about" className="block px-3 py-2 text-white hover:bg-gray-700 rounded-md" onClick={(e) => {e.preventDefault(); scrollToSection('about'); toggleMenu();}}>About Us</a>
-          <a href="#contact" className="block px-3 py-2 text-white hover:bg-gray-700 rounded-md" onClick={(e) => {e.preventDefault(); scrollToSection('contact'); toggleMenu();}}>Contact</a>
+          <a href="#about" className="block px-3 py-2 text-zseetech-blue hover:bg-muted rounded-md" onClick={(e) => {e.preventDefault(); scrollToSection('about'); toggleMenu();}}>About Us</a>
+          <a href="#contact" className="block px-3 py-2 text-zseetech-blue hover:bg-muted rounded-md" onClick={(e) => {e.preventDefault(); scrollToSection('contact'); toggleMenu();}}>Contact</a>
           <Button 
             className="w-full bg-zseetech-teal-dark hover:bg-zseetech-blue-dark text-white"
             onClick={() => {scrollToSection('get-in-touch'); toggleMenu();}}
